@@ -9,7 +9,7 @@ export default function Footer() {
                           <div className="col-lg-12">
                               <div className="footer-top-content">
                                   <div className="footer-logo">
-                                      <a href="/"><img className="img-fluid" src="/assets/img/clarextechwhite.png" height="150px" width="150px" alt="" /></a>
+                                      <a href="/"><img className="img-fluid" src="/assets/img/clarextechwhite.png" height="150px" width="150px" alt="CLAREx Tech & Trade" /></a>
                                   </div>
                                   <div className="footer-contect">
                                       <div className="icon">
@@ -23,7 +23,7 @@ export default function Footer() {
                                       </div>
                                       <div className="content">
                                           <span>Call Any Time</span>
-                                          <h6><a href="tel: 1922-599444">+880-1922-599444</a></h6>
+                                          <h6><a href="tel:+8801922599444">+880-1922-599444</a></h6>
                                       </div>
                                   </div>
                               </div>
@@ -42,7 +42,7 @@ export default function Footer() {
                                       </svg>
                                       Address
                                   </h4>
-                                  <a href="#">House:336, Lane: 05,DOHS Baridhara, Dhaka Bangladesh</a>
+                                  <a href="/contact">House 336, Lane 05, DOHS Baridhara, Dhaka, Bangladesh</a>
                               </div>
                               <div className="footer-contact mb-40">
                                   <h4>
@@ -55,7 +55,7 @@ export default function Footer() {
                             
                               </div>
                               <div className="footer-contact">
-                                  <h6>See Our New updates</h6>
+                                  <h6>Get our updates</h6>
                                   <form>
                                       <div className="form-inner">
                                           <input type="text" placeholder="Email here..." />
@@ -128,8 +128,7 @@ export default function Footer() {
                           <div className="col-lg-12">
                               <div className="footer-btn-content">
                                   <div className="copyright-area">
-                                      <p><a href="#">© CLARExTech</a> <a href="https://www.egenslab.com/">| All Rights
-                                              Reserved</a></p>
+                                      <p>© {new Date().getFullYear()} CLAREx Tech & Trade Limited. All rights reserved.</p>
                                   </div>
                                   <div className="footer-social">
                                       <ul>

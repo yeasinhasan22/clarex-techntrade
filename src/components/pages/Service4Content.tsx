@@ -10,71 +10,50 @@ export default function Service4Content() {
                           <div className="portfolio-content">
                               <h3>Managed IT Services</h3>
                               <h4>Your Partner in Seamless IT Operations</h4>
-                              <p>Welcome to Clarex Tech, where our Managed IT Services are tailored to elevate your business by
-                                  taking the complexity out of IT operations. From proactive network management to ensuring
-                                  data security, our comprehensive suite of services ensures your IT infrastructure remains
-                                  robust, efficient, and aligned with your business goals.</p>
+                              <p>We take the complexity out of IT operations, from proactive network management to data
+                                  security, and keep your infrastructure aligned with your business goals.</p>
 
                               <h4>Network and Infrastructure Management</h4>
-                              <p>Imagine having a dedicated partner overseeing the health of your entire IT ecosystem. Our
-                                  Network and Infrastructure Management services do just that. It's like having a proactive
-                                  ally ensuring your networks, servers, and systems operate at peak efficiency, minimizing
-                                  downtime and optimizing performance.</p>
+                              <p>We oversee the health of your networks, servers, and systems to minimize downtime and keep
+                                  performance high.</p>
 
                               <h4>Datacenter Solutions</h4>
-                              <p>Consider our Datacenter Solutions as the powerhouse of your digital operations. We provide
-                                  secure and scalable data storage solutions, ensuring your critical business data is not only
-                                  protected but also easily accessible when needed. It's like having a fortified vault for
-                                  your digital assets.
+                              <p>Secure, scalable storage that keeps critical business data protected and available.
                               </p>
 
                               <h4>Endpoint Management</h4>
-                              <p>Visualize having a digital guardian for every device connected to your network. Our Endpoint
-                                  Management services ensure the security and optimal performance of each endpoint – be it
-                                  desktops, laptops, or mobile devices. It's like having a vigilant sentinel securing your
-                                  digital perimeter.</p>
+                              <p>Every desktop, laptop, and mobile device on your network stays secured and performing as
+                                  it should.</p>
 
                               <h4>IT Help Desk Support</h4>
-                              <p>Think of our IT Help Desk Support as your on-call IT troubleshooters. Whether it's resolving
-                                  technical issues, providing software assistance, or offering guidance, our support team is
-                                  ready 24/7. It's like having a reliable helpline for your employees, ensuring they can focus
-                                  on their tasks without IT interruptions.</p>
+                              <p>A support team on call 24/7, so your people are not stuck waiting on IT to get work
+                                  done.</p>
 
                               <h4>Patch Management</h4>
-                              <p>Imagine having a team ensuring that your software is always up-to-date and secure. Our Patch
-                                  Management services do precisely that. It's like having a dedicated squad keeping your
-                                  applications and systems current, reducing vulnerabilities and enhancing overall security.
+                              <p>Applications and systems stay current, closing vulnerabilities before they can be
+                                  exploited.
                               </p>
 
                               <h4>IT Asset Management</h4>
-                              <p>Consider our IT Asset Management services as your digital inventory control. We help you keep
-                                  track of your hardware and software assets, ensuring optimal utilization and compliance.
-                                  It's like having a meticulous curator managing your digital resources for maximum
-                                  efficiency.</p>
+                              <p>We track your hardware and software assets to keep utilization efficient and licensing
+                                  compliant.</p>
 
                               <h4>Backup and Disaster Recovery</h4>
-                              <p>Visualize having a safety net for your digital assets. Our Backup and Disaster Recovery
-                                  services ensure your critical data is regularly backed up and can be swiftly recovered in
-                                  case of unexpected incidents. It's like having a fail-safe mechanism to protect your
-                                  business continuity.</p>
+                              <p>Regular backups and fast recovery keep your business running through unexpected
+                                  incidents.</p>
 
                               <h4>Remote Monitoring and Management</h4>
-                              <p>Think of our Remote Monitoring and Management services as your digital surveillance system.
-                                  We proactively monitor your IT infrastructure, identify potential issues, and address them
-                                  before they impact your operations. It's like having a virtual guardian keeping a watchful
-                                  eye on your systems.
+                              <p>We watch your infrastructure continuously and resolve issues before they reach your
+                                  operations.
                               </p>
 
                               <h4>Proactive Security Measures</h4>
-                              <p>Imagine having a dedicated team implementing robust security measures to safeguard your
-                                  business. Our Proactive Security Measures cover everything from antivirus management to
-                                  intrusion detection. It's like having a digital security force working tirelessly to protect
-                                  your sensitive information.</p>
+                              <p>From antivirus management to intrusion detection, layered defences protect your sensitive
+                                  information.</p>
 
                               <h4>Customized Service Plans</h4>
-                              <p>Consider our Customized Service Plans as a tailor-made solution for your unique business
-                                  needs. We work closely with you to create a service plan that aligns with your goals and
-                                  budget. It's like having a personalized roadmap for your IT success.</p>
+                              <p>We build a service plan that fits your goals and your budget, rather than a fixed
+                                  package.</p>
 
                               <div className="working-process">
                                   <h3>Our Process</h3>
@@ -112,25 +91,23 @@ export default function Service4Content() {
                                   </div>
                               </div>
                         
-                              <h3>Choosing Clarex Tech for Managed IT</h3>
-                              <p> IT Services means more than outsourcing your IT needs – it's partnering with a team
-                                  committed to ensuring your IT operations are not just efficient but also a catalyst for your
-                                  business growth. Experience the difference with Clarex Tech – where managed services are
-                                  redefined to meet the unique demands of your business.</p>
+                              <h3>Choosing CLAREx Tech & Trade for Managed IT</h3>
+                              <p> This is more than outsourcing your IT. It is a team accountable for making your IT
+                                  operations efficient enough to drive business growth.</p>
                           </div>
                       </div>
                       <div className="col-lg-4">
                           <div className="portfolio-info">
                               <ul>
                                   <li>
-                                      <span>Call Us anytime:</span>
+                                      <span>Office:</span>
 
                                   </li>
                                   <li>
-                                      <h5>CLARExTech</h5>
+                                      <h5>CLAREx Tech & Trade</h5>
                                   </li>
                                   <li>
-                                      <h5>House:336, Lane: 05,DOHS Baridhara, Dhaka Bangladesh</h5>
+                                      <h5>House 336, Lane 05, DOHS Baridhara, Dhaka, Bangladesh</h5>
                                   </li>
                                   <li>
                                       <span>Phone:</span>

@@ -5,18 +5,14 @@ export default function Header() {
       <div className="header-sidebar">
               <div className="siderbar-top">
                   <div className="sidebar-log">
-                      <a href="/"><img src="/assets/img/clarextechwhite.png" height="25px" width="130px" alt="" /></a>
+                      <a href="/"><img src="/assets/img/clarextechwhite.png" height="25px" width="130px" alt="CLAREx Tech & Trade" /></a>
                   </div>
                   <div className="close-btn">
                       <i className="bi bi-x-lg"></i>
                   </div>
               </div>
               <div className="sidebar-content">
-                  <p>Welcome to CLAREx Tech, where success is not just a goal but a journey marked by:<br />
-                      -Business Transformation<br />
-                      -Cost Reduction<br />
-                      -Profit Maximization<br />
-                      We Offer you to Experience a Rapid Rise in Company Valuation and Taste Automation.</p>
+                  <p>Business transformation, cost reduction, and profit maximization through automation.</p>
               </div>
               <div className="address-card">
                   <div className="content">
@@ -26,7 +22,7 @@ export default function Header() {
                                   <i className="fas fa-map-marker-alt"></i>
                               </div>
                               <div className="info">
-                                  <p>House: 336,Lane:05, DOHs Baridhara, Dhaka, Bangladesh</p>
+                                  <p>House 336, Lane 05, DOHS Baridhara, Dhaka, Bangladesh</p>
                               </div>
                           </div>
                           <div className="single-info">
@@ -34,7 +30,7 @@ export default function Header() {
                                   <i className="fas fa-phone-alt"></i>
                               </div>
                               <div className="info">
-                                  <a href="tel:06571111576">+880-1922-599444</a>
+                                  <a href="tel:+8801922599444">+880-1922-599444</a>
 
                               </div>
                           </div>
@@ -52,7 +48,7 @@ export default function Header() {
               </div>
               <div className="follow-area">
                   <h5 className="blog-widget-title">Follow Us</h5>
-                  <p className="para">Follow us on Social Network</p>
+                  <p className="para">Stay connected with us.</p>
                   <div className="blog-widget-body">
                       <ul className="follow-list d-flex flex-row align-items-start gap-4">
                           <li><a href="https://www.facebook.com/"><i className="bx bxl-facebook"></i></a></li>
@@ -66,12 +62,12 @@ export default function Header() {
 
           <header className="header-area2 one">
               <div className="header-logo">
-                  <a href="/"><img alt="image" className="img-fluid" src="/assets/img/clarextechwhite.png" height="150px" width="150px" /></a>
+                  <a href="/"><img alt="CLAREx Tech & Trade" className="img-fluid" src="/assets/img/clarextechwhite.png" height="150px" width="150px" /></a>
               </div>
               <div className="main-menu">
                   <div className="mobile-logo-area d-lg-none d-flex justify-content-between align-items-center">
                       <div className="mobile-logo-wrap">
-                          <a href="/"><img alt="image" src="/assets/img/clarextechwhite.png" height="150px" width="150px" /></a>
+                          <a href="/"><img alt="CLAREx Tech & Trade" src="/assets/img/clarextechwhite.png" height="150px" width="150px" /></a>
                       </div>
                   </div>
                   <ul className="menu-list">

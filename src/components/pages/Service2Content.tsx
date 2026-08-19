@@ -10,56 +10,40 @@ export default function Service2Content() {
                           <div className="portfolio-content">
                               <h3>Infrastructure and Network Services</h3>
                               <h4>Infrastructure and Network Services: Fortifying Your Digital Backbone</h4>
-                              <p>Welcome to Clarex Tech, where our Infrastructure and Network Services are designed to optimize
-                                  and fortify the core of your digital operations. Whether you're a small business or an
-                                  enterprise, our services ensure your IT infrastructure remains reliable, secure, and primed
-                                  for peak performance.</p>
+                              <p>We optimize and fortify the core of your digital operations, keeping your infrastructure
+                                  reliable, secure, and fast at any scale.</p>
 
                               <h4>Server Administration</h4>
-                              <p>Imagine having a skilled caretaker for your servers, ensuring they operate at their best.
-                                  That's what our Server Administration services offer. It's like having a dedicated expert
-                                  fine-tuning your server resources to enhance efficiency and responsiveness.</p>
+                              <p>Dedicated specialists tune your server resources for efficiency and responsiveness.</p>
 
                               <h4>Network Administration</h4>
-                              <p>Think of your network as the lifeline of your digital operations. Our Network Administration
-                                  services ensure this lifeline remains secure and stable. It's like having a guardian that
-                                  oversees your network's health, preventing disruptions and ensuring seamless connectivity.
+                              <p>Continuous oversight of your network&apos;s health keeps connectivity stable and prevents
+                                  disruptions.
                               </p>
 
                               <h4>Network Design</h4>
-                              <p>Consider our Network Design services as architects for your digital connectivity. We tailor
-                                  your network structure to meet your unique business requirements. It's similar to having a
-                                  custom-designed road map for efficient and effective data flow within your organization.</p>
+                              <p>We shape your network structure around your business requirements, so data flows the way
+                                  your teams actually work.</p>
 
                               <h4>Data Storage Solutions</h4>
-                              <p>Visualize having a secure vault for your digital assets. Our Data Storage Solutions ensure
-                                  your data is not only stored securely but also easily accessible when needed. It's like
-                                  having a reliable and organized storage facility for your crucial information.</p>
+                              <p>Your data stays secure and stays accessible when you need it.</p>
 
                               <h4>Cloud Integration</h4>
-                              <p>Seamlessly integrating the power of the cloud into your operations is crucial. Our Cloud
-                                  Integration services make this a reality. It's like having an additional powerhouse that
-                                  enhances your capabilities, allowing for scalability and flexibility.</p>
+                              <p>Cloud capacity added to your existing operations for scalability and flexibility.</p>
 
                               <h4>Disaster Recovery Planning</h4>
-                              <p>Disaster recovery planning is like your digital insurance policy. Our services ensure your
-                                  data is backed up and recovery plans are in place. It's like having a safety net that
-                                  minimizes downtime in the face of unexpected challenges.</p>
+                              <p>Backups and tested recovery plans that minimize downtime when something goes wrong.</p>
 
                               <h4>Virtualization Services</h4>
-                              <p>Consider our Virtualization Services as a way to maximize your IT resources. It's like having
-                                  a magician who optimizes hardware resources, allowing you to run multiple applications and
-                                  operating systems on a single server efficiently.</p>
+                              <p>Run multiple applications and operating systems on shared hardware, without waste.</p>
 
                               <h4>Network Performance Monitoring</h4>
-                              <p>Your digital fitness tracker can be our network performance monitoring. Our services
-                                  continuously track and analyze your network's performance. It's similar to having real-time
-                                  insights into how your digital systems are operating.</p>
+                              <p>Continuous tracking and analysis gives you real-time insight into how your systems
+                                  perform.</p>
 
                               <h4>IT Consultation</h4>
-                              <p>What if your need a trusted advisor for your IT strategy. Our IT Consultation services
-                                  provide expert guidance tailored to your business goals. It's like having a seasoned
-                                  navigator steering your IT initiatives toward success.</p>
+                              <p>Expert guidance on IT strategy, tied to your business goals rather than a vendor&apos;s
+                                  roadmap.</p>
 
                               <div className="working-process">
                                   <h3>Our Process</h3>
@@ -98,26 +82,22 @@ export default function Service2Content() {
                               </div>
                         
                               <h3>Why Us?</h3>
-                              <p> Maintaining your digital infrastructure isn't the only reason to choose Clarex Tech for
-                                  Infrastructure and Network Services. It's similar to working together with a dedicated
-                                  partner who is committed to strengthening, protecting, and improving the core of your
-                                  digital operations. Experience the difference with Clarex Tech, where network and
-                                  infrastructure services go above and beyond to ensure that your digital foundation is
-                                  professionally managed.</p>
+                              <p> We do more than maintain your infrastructure. We strengthen and improve the foundation
+                                  your digital operations depend on.</p>
                           </div>
                       </div>
                       <div className="col-lg-4">
                           <div className="portfolio-info">
                               <ul>
                                   <li>
-                                      <span>Call Us anytime:</span>
+                                      <span>Office:</span>
 
                                   </li>
                                   <li>
-                                      <h5>CLARExTech</h5>
+                                      <h5>CLAREx Tech & Trade</h5>
                                   </li>
                                   <li>
-                                      <h5>House:336, Lane: 05,DOHS Baridhara, Dhaka Bangladesh</h5>
+                                      <h5>House 336, Lane 05, DOHS Baridhara, Dhaka, Bangladesh</h5>
                                   </li>
                                   <li>
                                       <span>Phone:</span>

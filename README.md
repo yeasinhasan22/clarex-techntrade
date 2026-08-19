@@ -1,6 +1,6 @@
-# CLAREx Tech Limited — Next.js Website
+# CLAREx Tech & Trade Limited — Next.js Website
 
-Modern **Next.js 16 + TypeScript (App Router)** rebuild of the CLAREx Tech corporate marketing site. Visual design, copy, assets, and animation behavior match the original static HTML theme; the source is now React/TSX with a shared layout.
+Modern **Next.js 16 + TypeScript (App Router)** rebuild of the CLAREx Tech & Trade corporate marketing site. Visual design, copy, assets, and animation behavior match the original static HTML theme; the source is now React/TSX with a shared layout.
 
 Original static files are preserved under [`legacy/`](./legacy/) for reference.
 
@@ -98,9 +98,9 @@ Theme CSS is linked in `src/app/layout.tsx` (not rewritten in Tailwind) so the l
 
 ---
 
-## Company (unchanged)
+## Company
 
-- **CLAREx Tech Limited** — Dhaka (Baridhara DOHS)  
+- **CLAREx Tech & Trade Limited** — Dhaka (Baridhara DOHS)  
 - Phone: +880-1922-599444  
 - Email: info@clarex.co  
 

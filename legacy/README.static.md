@@ -1,6 +1,6 @@
-# CLAREx Tech Limited — Website Documentation
+# CLAREx Tech & Trade Limited — Website Documentation
 
-Corporate marketing website for **CLAREx Tech Limited** (also styled as CLARExTech / Clarex Tech): an IT services and process-automation company based in Dhaka, Bangladesh.
+Corporate marketing website for **CLAREx Tech & Trade Limited**: an IT services and process-automation company based in Dhaka, Bangladesh. Note that `csec.html` uses **CLARExTech** as the name of the security *platform*, which is distinct from the company name.
 
 This repository is a **static multi-page HTML website** built from a commercial dark-theme template (Egens Lab lineage; footer credits “egenslab.com”), customized with CLAREx branding, service content, and contact details. There is **no Node/React/build pipeline** — pages are plain HTML/CSS/JavaScript that can be opened locally or hosted on any static web server (Apache, Nginx, Netlify, Cloudflare Pages, etc.).
 
@@ -31,14 +31,14 @@ This repository is a **static multi-page HTML website** built from a commercial 
 
 | Field | Value |
 |--------|--------|
-| **Brand** | CLAREx Tech Limited |
+| **Brand** | CLAREx Tech & Trade Limited |
 | **Positioning** | Business transformation, cost reduction, profit maximization, automation, IT-enabled services |
 | **Tagline (hero)** | “EXCEL THROUGH AUTOMATION WITH INNOVATION” |
 | **Address** | House: 336, Lane: 05, DOHs Baridhara, Dhaka, Bangladesh |
 | **Phone** | +880-1922-599444 |
 | **Email** | info@clarex.co |
 | **CEO (About)** | M. Jahangir Alam, FCMA |
-| **Map** | Google Maps embed on `contact.html` searching “Clarex Limited” |
+| **Map** | Google Maps embed on `contact.html` searching the street address |
 
 Focus themes from About: process automation, 24/7 onshore/offshore delivery, Triple Bottom Line (People, Profit, Planet), cybersecurity excellence, Odoo/ERP, and sustainable IT careers.
 
@@ -157,7 +157,7 @@ clarex-techntrade/
 
 ## 5. Page inventory
 
-All pages currently share the same browser title: **“CLAREx Tech Limited”**.
+All pages currently share the same browser title: **“CLAREx Tech & Trade Limited”**.
 
 | File | Purpose |
 |------|---------|
@@ -628,7 +628,7 @@ Documented for future cleanup — not exhaustive:
 
 ## License / attribution
 
-Site content and branding: **CLAREx Tech Limited**.  
+Site content and branding: **CLAREx Tech & Trade Limited**.  
 Underlying UI theme originates from an **Egens Lab**-style HTML template (see footer “All Rights Reserved” / egenslab credit). Respect the original template license for redistribution of vendor theme files.
 
 ---

@@ -17,17 +17,13 @@ export default function AboutContent() {
                               <span>About Us</span>
                               <h2>EXCEL THROUGH AUTOMATION WITH INNOVATION</h2>
                               <div className="author-and-meta">
-                                  <p>At Clarex Tech, our specialty is providing customized process automation solutions and
-                                      IT-enabled services that are designed to satisfy a range of business operation needs.
+                                  <p>We build custom process automation and IT-enabled services around the way your
+                                      business actually operates.
                                   </p>
 
                               </div>
-                              <p>Our fundamental values center on streamlining complex procedures and adding adaptability to
-                                  our system of operations. This strategy enables us to offer 24/7 services in a number of
-                                  domains. Under the direction of a group of qualified and experienced experts, we make sure
-                                  that our staff effectively attends to the requirements of both onshore and offshore clients
-                                  in every way. To advance your company, Clarex Tech is dedicated to reducing complexity and
-                                  providing requirement based solutions.
+                              <p>Our work centres on simplifying complex processes and keeping operations adaptable,
+                                  which is what lets us support onshore and offshore clients around the clock.
                               </p>
 
                               <blockquote>
@@ -42,41 +38,21 @@ export default function AboutContent() {
                                   </div>
                               </blockquote>
                               <h3>Driving Transformation and Sustainability</h3>
-                              <p> Navigating the path of change and sustainability, Clarex Tech opens doors to impactful
-                                  solutions. Confronted with challenges beyond your capabilities? Let us handle the
-                                  complexities, allowing you to focus on what truly matters.</p>
+                              <p> Facing challenges beyond your current capacity? We take on the complexity so you can
+                                  focus on the work that moves your business forward.</p>
                               <h3>Pioneering Disruptions for Quality Solutions</h3>
-                              <p> In a competitive and dynamic market, precision and data readiness are paramount. Clarex Tech
-                                  acts as your disruptor, delivering intelligent, data-driven solutions and strategies while
-                                  you concentrate on refining your business processes.</p>
+                              <p> In a competitive market, precision and data readiness decide outcomes. We deliver the
+                                  intelligent, data-driven solutions behind those decisions.</p>
                               <h3>Cultivating Sustainable Careers in IT</h3>
-                              <p> Every year, talented individuals emerge, yet the gap between potential and employment
-                                  persists. Clarex Tech recognizes this challenge and collaborates with youths, unveiling their
-                                  strengths for a world of sustainable IT employment. Join us in cultivating careers that
-                                  last.</p>
-                              <h3>People, Planet, and Sustainable Solutions</h3>
-                              <p> Success measured by impact or results? In developing nations, results with profit margins
-                                  often take precedence. Yet, in pursuit of these results, we've seen resources and workforce
-                                  underutilized, delaying our transformative revolution. The measure of success should
-                                  encompass economic, environmental, and social dimensions. The Triple Bottom Line (TBL)
-                                  sustainability framework - People, Profit, and Planet - forms the core of our commitment,
-                                  creating societal impact, inclusivity, and a revenue stream for the underprivileged.</p>
-                              <h3>Triple Bottom Line (TBL): Our Feasible Solution</h3>
-                              <p> Business transcends mere profit generation. Economic growth, environmental health, and
-                                  social advancement are integral to long-term success. The Triple Bottom Line (TBL)
-                                  philosophy is our compass, holding us accountable for Profit, Planet, and People. It's our
-                                  constitutional commitment to safeguard and improve Bangladesh's ecosystem and environment.
-                              </p>
-                              <h3>Clarex Tech: Nurturing Impactful Growth</h3>
-                              <p> At Clarex Tech, our performance is measured not just in profit but in sustainability and
-                                  institutional growth that resonates with our surroundings. We approach our products/services
-                                  with a focus on creating a positive impact on society and the environment. From profit to
-                                  planet and people, every deliverable is a testament to our commitment.</p>
-                              <h3>Why Choose Clarex Tech for Your Transformation?</h3>
-                              <p> Today's doubts shouldn't hinder tomorrow's progress. Begin your transformation with CLAREx
-                                  Tech, where seamless technology, collaborative workflows, unparalleled growth, a skilled
-                                  multifunctional workforce, and 24/7 technical support pave the way for your sustainable
-                                  journey.
+                              <p> Talent emerges every year, but the gap between potential and employment persists. We work
+                                  with young professionals to build IT careers that last.</p>
+                              <h3>Triple Bottom Line: People, Profit, Planet</h3>
+                              <p> Business is more than profit. The Triple Bottom Line framework holds us accountable
+                                  across all three, and shapes how we measure our own growth and our commitment to
+                                  Bangladesh&apos;s environment.</p>
+                              <h3>Why Choose CLAREx Tech & Trade?</h3>
+                              <p> Seamless technology, collaborative workflows, a skilled multifunctional team, and 24/7
+                                  technical support.
                               </p>
                               <div className="blog-details-img-group">
                                   <div className="row g-4">

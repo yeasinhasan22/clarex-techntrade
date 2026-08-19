@@ -10,10 +10,8 @@ export default function ContactContent() {
                               <span>CONTACT WITH US</span>
                               <h2>LET'S WORK TOGETHER?</h2>
                               <p>
-                                  We are available to respond to your questions, resolve your concerns, and discuss how CLAREx
-                                  Tech can help you grow your company. Our team is available to help, whether you need technical
-                                  support, have inquiries about our services, or would like to talk about a possible
-                                  partnership.
+                                  Technical support, questions about our services, or a possible partnership — our team is
+                                  here for all of it.
                               </p>
                               <div className="informations">
                                   <div className="single-info">
@@ -45,7 +43,7 @@ export default function ContactContent() {
                               </div>
                               <div className="follow-area">
                                   <h5 className="blog-widget-title">Follow Us</h5>
-                                  <p className="para">Follow us on Social Network</p>
+                                  <p className="para">Stay connected with us.</p>
                                   <div className="blog-widget-body">
                                       <ul className="follow-list d-flex flex-row align-items-start gap-4">
                                           <li><a href="https://www.facebook.com/"><i className="bx bxl-facebook"></i></a></li>
@@ -110,7 +108,7 @@ export default function ContactContent() {
               </div>
           </div>
           <div className="contact-map">
-              <iframe src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=clarex%20limited+(Clarex%20Limited)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" style={{ border: "0" }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+              <iframe src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=House%20336%2C%20Lane%2005%2C%20DOHS%20Baridhara%2C%20Dhaka%2C%20Bangladesh&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" style={{ border: "0" }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
           </div>
     </>
   );

@@ -11,9 +11,7 @@ export default function ServiceDetailsContent() {
                                   <div className="section-title-5">
                                       <h2>Services</h2>
                                   </div>
-                                  <p>Welcome to Clarex Tech, where innovation meets efficiency. Our comprehensive suite of
-                                      services is designed to propel your business forward, ensuring a seamless and successful
-                                      digital transformation. Explore our offerings below:</p>
+                                  <p>Everything we offer, in one place:</p>
                                   <ul className="about-featue">
                                       <li>
                                           <svg width="15" height="15" viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg">
@@ -160,31 +158,29 @@ export default function ServiceDetailsContent() {
                           </div>
                           <div className="col-lg-6 d-flex align-items-center wow animate fadeInRight" data-wow-delay="300ms" data-wow-duration="1500ms">
                               <div className="faq-content-area">
-                                  <h2>CLARExTech</h2>
+                                  <h2>CLAREx Tech & Trade</h2>
                                   <div className="accordion" id="accordionExample">
                                       <div className="accordion-item">
                                           <h6 className="accordion-header" id="headingOne">
                                               <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                                  Why Choose CLARExTech?
+                                                  Why Choose CLAREx Tech & Trade?
                                               </button>
                                           </h6>
                                           <div id="collapseOne" className="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                               <div className="accordion-body">
-                                                  <li>Innovation-Driven: We leverage cutting-edge technologies to bring
-                                                      innovation to the heart of your business.</li>
-                                                  <li>Customer-Centric: Your business goals are our priority. Our solutions
-                                                      are tailored to meet your unique needs.</li>
-                                                  <li>Experienced Team: With a certified and professional management team, we
-                                                      ensure excellence in every service we provide.</li>
-                                                  <li>Scalable Solutions: Our services are designed to grow with your
-                                                      business, providing scalable solutions for long-term success.</li>
+                                                  <ul>
+                                                      <li>Innovation-driven, using current technology rather than what we
+                                                          already know.</li>
+                                                      <li>Customer-centric, with solutions built around your goals.</li>
+                                                      <li>A certified and experienced management team.</li>
+                                                      <li>Scalable solutions that grow with your business.</li>
+                                                  </ul>
                                               </div>
                                           </div>
                                       </div>
                                   </div>
-                                  <p style={{ color: "rgba(240, 248, 255, 0.596)" }}>Choose Clarex Tech as your trusted partner on
-                                      the journey to digital excellence. Explore our services and take the first step towards
-                                      transforming your business today.</p>
+                                  <p style={{ color: "rgba(240, 248, 255, 0.596)" }}>Explore our services and take the first step
+                                      towards transforming your business.</p>
                               </div>
                           </div>
                       </div>

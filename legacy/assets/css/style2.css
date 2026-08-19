@@ -5788,6 +5788,22 @@ video {
     font-weight: 400
 }
 
+.home3-about-section .about-right .about-exprience .years h4 {
+    font-family: var(--font-saira);
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 30px;
+    color: #263238;
+    max-width: 150px;
+    margin: 0 auto
+}
+
+.home3-about-section .about-right .about-exprience .years h4 span {
+    display: block;
+    font-size: 20px;
+    font-weight: 400
+}
+
 .home3-success-stories-area {
     background: #1b1f23;
     padding: 100px 8%;
