@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import ModernPageEffects from "@/components/modern/ModernPageEffects";
+import ProjectTabs from "@/components/modern/ProjectTabs";
 
 const MODULES = [
   { label: "ERP", icon: "bi bi-diagram-3" },
@@ -143,6 +144,115 @@ const REGIONS = [
   { country: "United Kingdom", img: "/assets/img/uk.png" },
 ];
 
+const PROJECTS = [
+  {
+    id: "la-mesa",
+    name: "LA MESA",
+    logo: "/assets/img/logos/La Mesa Logo.png",
+    industry: "Food & Beverage",
+    country: "Bangladesh",
+    tagline: "Restaurant POS, waiter commission automation and real-time inventory sync for a growing dining brand.",
+    deliverables: [
+      "Restaurant POS and order management configuration",
+      "Waiter-based POS order processing",
+      "Automated 2% waiter commission calculation",
+      "Commission recomputation and reporting automation",
+      "Role-based POS access control and security",
+      "Employee and biometric attendance integration",
+      "Real-time POS and inventory synchronization",
+      "Financial reporting and transaction automation",
+    ],
+  },
+  {
+    id: "goodybro",
+    name: "GoodyBro",
+    logo: "/assets/img/logos/Goodybro_logo.png",
+    industry: "Retail & eCommerce",
+    country: "Bangladesh",
+    tagline: "End-to-end Shopify–Odoo integration covering sales, warehouse, accounting and deep customer analytics.",
+    deliverables: [
+      "Shopify eCommerce integration with Odoo",
+      "Role-based user access control and security",
+      "Sales and customer management",
+      "Order tracking and delivery management",
+      "Warehouse and inventory management",
+      "Product-wise sales and quantity analysis",
+      "Incoming stock monitoring and management",
+      "Accounting and financial management",
+      "Sales performance dashboards",
+      "Customer count and geographical analysis",
+      "District-wise and country-wise customer reporting",
+      "Daily, weekly, monthly, and yearly performance analysis",
+      "Integrated Sales, Warehouse, Inventory, and Accounting operations",
+    ],
+  },
+  {
+    id: "marvel-be-you",
+    name: "Marvel Be You",
+    logo: "/assets/img/logos/marvel-logo.webp",
+    industry: "Professional Services",
+    country: "Bangladesh",
+    tagline: "Full CRM build-out — pipeline, sales stages, activity automation and custom reporting for a brand consultancy.",
+    deliverables: [
+      "Lead and opportunity management",
+      "CRM pipeline and sales stage configuration",
+      "Role-based access control and user security",
+      "Sales team and user configuration",
+      "CRM activity and follow-up automation",
+      "Customer and brand relationship management",
+      "Customized CRM workflows",
+      "CRM reporting and pipeline visibility",
+    ],
+  },
+  {
+    id: "presswayy",
+    name: "Presswayy",
+    logo: "/assets/img/logos/presswayy-logo.png",
+    industry: "Media & Publishing",
+    country: "Bangladesh",
+    tagline: "Integrated CRM, Sales and Accounting with granular revenue tracking, client lifecycle management and KPI dashboards.",
+    deliverables: [
+      "Role-based access control and user security",
+      "Client onboarding and customer lifecycle management",
+      "Sales pipeline and performance management",
+      "Paid and unpaid client tracking",
+      "Payment and revenue collection monitoring",
+      "Daily, weekly, monthly, and yearly performance dashboards",
+      "District-wise and country-wise client analysis",
+      "Integrated CRM, Sales, and Accounting workflows",
+      "Management dashboards and KPI reporting",
+      "Business performance and revenue analysis",
+    ],
+  },
+  {
+    id: "trt-arredo",
+    name: "TRT ARREDO",
+    logo: "/assets/img/logos/TRT_ARREDO_LOGO.png",
+    industry: "Manufacturing & Design",
+    country: "Nigeria",
+    tagline: "Odoo 17 → 19 migration across 15 modules, full HR automation with Nigerian PAYE/Pension rules and project management workflows.",
+    deliverables: [
+      "Odoo 17 to Odoo 19 database migration and system upgrade",
+      "End-to-end data migration, validation, and live database cutover",
+      "Odoo 19 configuration and optimization across 15 modules",
+      "Sales and quotation management with BOM-based costing",
+      "Purchase and procurement management",
+      "Inventory and warehouse management",
+      "Manufacturing, BOM, and production workflow configuration",
+      "Accounting, invoicing, and financial controls",
+      "Automated payroll with Nigerian PAYE and Pension rules",
+      "Employee attendance, Time Off, and HR management",
+      "Multi-level employee appraisal workflows",
+      "Project management, SOP workflows, and profitability dashboards",
+      "Migration of design workflows from ClickUp to Odoo",
+      "Digital design briefs and centralized document management",
+      "Role-based access control and security",
+      "Chatter/Discuss, notifications, and business process automation",
+      "Management dashboards, reporting, and analytics",
+    ],
+  },
+];
+
 const VERTICALS = [
   "Manufacturing",
   "Retail & E-commerce",
@@ -210,6 +320,10 @@ export default function OdooContent() {
                   <i className="bi bi-globe" aria-hidden="true" />
                   Delivered in 4 countries
                 </span>
+                <span className="cx-chip">
+                  <i className="bi bi-trophy" aria-hidden="true" />
+                  5 projects completed
+                </span>
               </div>
             </div>
 
@@ -238,6 +352,7 @@ export default function OdooContent() {
       <nav className="cx-subnav" aria-label="Page sections">
         <div className="cx-container">
           <div className="cx-subnav-inner">
+            <a href="#projects">Projects</a>
             <a href="#partnership">Partnership</a>
             <a href="#modules">Modules</a>
             <a href="#approach">Approach</a>
@@ -253,6 +368,10 @@ export default function OdooContent() {
         <div className="cx-container">
           <div className="cx-stats cx-reveal">
             <div className="cx-stat">
+              <div className="cx-stat-value">5</div>
+              <p className="cx-stat-label">Projects successfully delivered</p>
+            </div>
+            <div className="cx-stat">
               <div className="cx-stat-value">2023</div>
               <p className="cx-stat-label">Official Odoo partner since</p>
             </div>
@@ -265,15 +384,27 @@ export default function OdooContent() {
             <div className="cx-stat">
               <div className="cx-stat-value">4</div>
               <p className="cx-stat-label">
-                Countries we have delivered projects in
+                Countries we have delivered in
               </p>
             </div>
-            <div className="cx-stat">
-              <div className="cx-stat-value">5</div>
-              <p className="cx-stat-label">
-                Phase implementation method, from scoping to support
-              </p>
-            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ---------------- Success Stories ---------------- */}
+      <section className="cx-section" id="projects">
+        <div className="cx-container">
+          <header className="cx-section-head cx-reveal">
+            <span className="cx-eyebrow">Proven delivery</span>
+            <h2 className="cx-h2">Projects we have completed</h2>
+            <p className="cx-lead">
+              Five live Odoo implementations across restaurants, eCommerce,
+              CRM, media and manufacturing — each built to fit exactly how
+              that business runs.
+            </p>
+          </header>
+          <div className="cx-reveal">
+            <ProjectTabs projects={PROJECTS} />
           </div>
         </div>
       </section>

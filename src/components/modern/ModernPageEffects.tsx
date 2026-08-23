@@ -18,15 +18,30 @@ export default function ModernPageEffects() {
 
     const cleanups: Array<() => void> = [];
 
-    /* ---- header height -> CSS custom property ---- */
+    /* ---- sticky chrome height -> CSS variable and anchor offsets ----
+       Above 1024px the legacy custom.js intercepts every in-page anchor click
+       and animates the scroll itself, which bypasses `scroll-margin-top`. It
+       does read a `data-offset` attribute though, so we publish the measured
+       chrome height there and the jump clears the header on both paths. */
     const header = document.querySelector<HTMLElement>("header.header-area2");
+    const subnav = root.querySelector<HTMLElement>(".cx-subnav");
+    const anchors = Array.from(
+      root.querySelectorAll<HTMLAnchorElement>("a[href^='#']"),
+    );
+
     if (header) {
-      const syncHeaderHeight = () => {
-        root.style.setProperty("--cx-header-h", `${header.offsetHeight}px`);
+      const syncChromeOffsets = () => {
+        const headerHeight = header.offsetHeight;
+        root.style.setProperty("--cx-header-h", `${headerHeight}px`);
+
+        const offset = headerHeight + (subnav?.offsetHeight ?? 0) + 12;
+        anchors.forEach((anchor) => {
+          anchor.dataset.offset = String(offset);
+        });
       };
-      syncHeaderHeight();
-      window.addEventListener("resize", syncHeaderHeight);
-      cleanups.push(() => window.removeEventListener("resize", syncHeaderHeight));
+      syncChromeOffsets();
+      window.addEventListener("resize", syncChromeOffsets);
+      cleanups.push(() => window.removeEventListener("resize", syncChromeOffsets));
     }
 
     /* ---- scroll reveal ---- */

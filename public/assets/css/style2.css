@@ -7,7 +7,9 @@
     --black-color2: #1D1D1D;
     --gray-color: #f7f7fd;
     --paragraph-color: #272727;
-    --theme-color: #e65711;
+    --theme-color: #A1C740;
+    --theme-color-hover: #3BC0BD;
+    --theme-color-secondary: #3BC0BD;
     --body-color: #eaf1f5;
     --border-color: #232323;
     --black-soft-color: #7e7e7e
@@ -1255,14 +1257,14 @@ video {
     width: 150%;
     bottom: 0;
     border-radius: 2px;
-    background-color: #0a1019;
+    background-color: var(--theme-color-hover);
     transform: skewX(45deg) scale(0, 1);
     z-index: -1;
     transition: all .5s ease-out 0s
 }
 
 .primary-btn3:hover {
-    color: var(--white-color)
+    color: var(--black-color2)
 }
 
 .primary-btn3:hover::after {
@@ -5414,7 +5416,7 @@ video {
 }
 
 .home3-solution-section .solution-card {
-    background-image: url(../img/home-3/pricing-bg-32.png), linear-gradient(#2b1308, #e658110a);
+    background-image: url(../img/home-3/pricing-bg-32.png), linear-gradient(#0d2220, #3BC0BD0a);
     background-size: cover;
     background-repeat: no-repeat;
     padding: 30px;
@@ -12960,3 +12962,131 @@ footer .footer-btm .footer-btn-content .footer-social ul li a:hover {
         border-radius: 3px;
     }
 }
+
+/* =============================================================================
+   GREEN ACCENT OVERRIDES  (#A1C740)
+   Applied after all theme rules so specificity wins cleanly.
+   ============================================================================= */
+
+/* --- Section-label dot decorators (the paired ::before / ::after dots
+       that frame the eyebrow label on section-title-5 style headings) --- */
+.section-title-5 > span::before,
+.section-title-5 > span::after {
+    background-color: var(--theme-color-secondary);
+}
+
+/* --- Nav: active top-level item gets a green underline accent --- */
+.header-area2 .main-menu ul > li.active > a {
+    color: var(--theme-color);
+    position: relative;
+}
+.header-area2 .main-menu ul > li.active > a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    height: 2px;
+    background: var(--theme-color);
+    border-radius: 2px;
+}
+
+/* --- Hover: top-level nav item text turns green on hover too --- */
+.header-area2 .main-menu ul > li:hover > a {
+    color: var(--theme-color);
+}
+
+/* --- Sub-menu active item (the active sub-page) in green --- */
+.header-area2 .main-menu ul > li ul.sub-menu > li.active > a,
+.header-area2 .main-menu ul > li ul.sub-menu > li a.active {
+    color: var(--theme-color);
+}
+
+/* --- Footer social icons: hover goes green --- */
+.footer-social ul li a:hover i,
+.follow-list li a:hover i {
+    color: var(--theme-color-secondary);
+}
+
+/* --- Footer widget links: hover turns green --- */
+.footer-widget .menu-container ul li a:hover {
+    color: var(--theme-color-secondary);
+}
+
+/* --- Swiper / pagination active bullet --- */
+.swiper-pagination-bullet-active {
+    background: var(--theme-color-secondary) !important;
+}
+
+/* --- Numbered badge / counter spans inside service/feature cards --- */
+.number-title,
+.section-count,
+.count-number,
+.project-count {
+    color: var(--theme-color-secondary);
+}
+
+/* --- "Check" icon in list items (feature lists, checklist items) --- */
+.check-icon i,
+.check-list li::before,
+.feature-list li i.bi-check-circle,
+.feature-list li i.bi-check2-circle,
+.feature-list li i.bx-check-circle {
+    color: var(--theme-color-secondary);
+}
+
+/* --- Swiper nav buttons: hover ring turns green --- */
+.swiper-btn:hover {
+    border-color: var(--theme-color-secondary);
+    color: var(--theme-color-secondary);
+}
+
+/* --- Section divider / eyebrow line element --- */
+.divider-line,
+.title-line,
+.section-line {
+    background: linear-gradient(90deg, var(--theme-color), var(--theme-color-secondary));
+}
+
+/* --- Service icon wrapper background: alternating teal / green
+       Every other card's icon tints to green --- */
+.service-icon:nth-child(even),
+.icon-wrap:nth-child(even) {
+    background: rgba(161, 199, 64, .12);
+    border-color: rgba(161, 199, 64, .25);
+    color: var(--theme-color-secondary);
+}
+
+/* --- Progress / skill bars fill colour (second pass) --- */
+.progress-bar-inner:nth-child(even) .bar-fill {
+    background: var(--theme-color-secondary);
+}
+
+/* --- Tag/badge text accent alternation --- */
+.tag-item:nth-child(even),
+.skill-tag:nth-child(even) {
+    color: var(--theme-color-secondary);
+    border-color: rgba(161, 199, 64, .35);
+}
+
+/* --- Mobile menu sidebar header accents --- */
+.header-sidebar .blog-widget-title {
+    color: var(--theme-color-secondary);
+}
+.header-sidebar .follow-list li a:hover {
+    color: var(--theme-color-secondary);
+}
+
+/* --- Footer newsletter button hover --- */
+.footer-contact .form-inner button:hover {
+    background: var(--theme-color-secondary);
+    border-color: var(--theme-color-secondary);
+}
+
+/* --- modern-pages secondary accent overrides --- */
+.cx-btn--primary:hover,
+.cx-tab[aria-selected="true"] {
+    background: var(--theme-color-secondary);
+    color: #000000;
+    box-shadow: 0 10px 28px -10px rgba(59, 192, 189, .55);
+}

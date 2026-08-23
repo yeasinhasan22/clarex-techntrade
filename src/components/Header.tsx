@@ -1,11 +1,26 @@
+'use client';
 /* eslint-disable @next/next/no-img-element */
+import { usePathname } from 'next/navigation';
+
+const SERVICE_PATHS = ['/noc', '/service2', '/service3', '/service4', '/service5', '/service6', '/service7', '/service8', '/service-details'];
+
 export default function Header() {
+  const pathname = usePathname();
+
+  const isActive = (href: string) => {
+    if (href === '/') return pathname === '/';
+    return pathname.startsWith(href);
+  };
+
+  const isServiceActive = () => SERVICE_PATHS.some(p => pathname.startsWith(p));
+
+
   return (
     <>
       <div className="header-sidebar">
               <div className="siderbar-top">
                   <div className="sidebar-log">
-                      <a href="/"><img src="/assets/img/clarextechwhite.png" height="25px" width="130px" alt="CLAREx Tech & Trade" /></a>
+                      <a href="/"><img src="/assets/img/clarex-techntrade.png" height="15px" width="100px" alt="CLAREx Tech & Trade" /></a>
                   </div>
                   <div className="close-btn">
                       <i className="bi bi-x-lg"></i>
@@ -62,36 +77,41 @@ export default function Header() {
 
           <header className="header-area2 one">
               <div className="header-logo">
-                  <a href="/"><img alt="CLAREx Tech & Trade" className="img-fluid" src="/assets/img/clarextechwhite.png" height="150px" width="150px" /></a>
+                  <a href="/"><img alt="CLAREx Tech & Trade" className="img-fluid" src="/assets/img/clarex-techntrade.png" height="12px" width="120px" /></a>
               </div>
               <div className="main-menu">
                   <div className="mobile-logo-area d-lg-none d-flex justify-content-between align-items-center">
                       <div className="mobile-logo-wrap">
-                          <a href="/"><img alt="CLAREx Tech & Trade" src="/assets/img/clarextechwhite.png" height="150px" width="150px" /></a>
+                          <a href="/"><img alt="CLAREx Tech & Trade" src="/assets/img/clarex-techntrade.png" height="15px" width="100px" /></a>
                       </div>
                   </div>
                   <ul className="menu-list">
-                      <li className="menu-item active">
+                      <li className={isActive('/') ? 'menu-item active' : 'menu-item'}>
                           <a href="/" className="drop-down">Home</a><i className="bi bi-plus dropdown-icon"></i>
                       </li>
-                      <li><a href="/about">About Us</a></li>
-                      <li className="menu-item">
+                      <li className={isActive('/about') ? 'menu-item active' : 'menu-item'}>
+                          <a href="/about">About Us</a>
+                      </li>
+                      <li className={isServiceActive() ? 'menu-item active' : 'menu-item'}>
                           <a href="/service-details">Service</a><i className="bi bi-plus dropdown-icon"></i>
                           <ul className="sub-menu">
-                              <li><a href="/noc">NOC Service</a></li>
-                              <li><a href="/service2">Infrastructure</a></li>
-                              <li><a href="/service3">Quality Assurance</a></li>
-                              <li><a href="/service4">Managed IT</a></li>
-                              <li><a href="/service5">Software Development</a></li>
-                              <li><a href="/service6">Security and Surveillance</a></li>
-                              <li><a href="/service7">SOC Services</a></li>
-                              <li><a href="/service8">ERP Solutions</a></li>
+                              <li className={isActive('/noc') ? 'active' : ''}><a href="/noc">NOC Service</a></li>
+                              <li className={isActive('/service2') ? 'active' : ''}><a href="/service2">Infrastructure</a></li>
+                              <li className={isActive('/service3') ? 'active' : ''}><a href="/service3">Quality Assurance</a></li>
+                              <li className={isActive('/service4') ? 'active' : ''}><a href="/service4">Managed IT</a></li>
+                              <li className={isActive('/service5') ? 'active' : ''}><a href="/service5">Software Development</a></li>
+                              <li className={isActive('/service6') ? 'active' : ''}><a href="/service6">Security and Surveillance</a></li>
+                              <li className={isActive('/service7') ? 'active' : ''}><a href="/service7">SOC Services</a></li>
+                              <li className={isActive('/service8') ? 'active' : ''}><a href="/service8">ERP Solutions</a></li>
                           </ul>
                       </li>
-                
-                      <li className="menu-item"><a href="/csec">Cybersecurity Excellence Center</a></li>
-                      <li className="menu-item"><a href="/odoo">Odoo Solutions</a></li>
-                      <li className="menu-item">
+                      <li className={isActive('/csec') ? 'menu-item active' : 'menu-item'}>
+                          <a href="/csec">Cybersecurity Excellence Center</a>
+                      </li>
+                      <li className={isActive('/odoo') ? 'menu-item active' : 'menu-item'}>
+                          <a href="/odoo">Odoo Solutions</a>
+                      </li>
+                      <li className={isActive('/contact') ? 'menu-item active' : 'menu-item'}>
                           <a href="/contact">Contact us</a>
                       </li>
                   </ul>
