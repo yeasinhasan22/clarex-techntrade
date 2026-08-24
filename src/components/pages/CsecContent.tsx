@@ -2,6 +2,7 @@
 import CapabilityTabs, {
   type CapabilityGroup,
 } from "@/components/modern/CapabilityTabs";
+import CsecHeroFx from "@/components/modern/CsecHeroFx";
 import ModernPageEffects from "@/components/modern/ModernPageEffects";
 
 const PLATFORM = [
@@ -272,6 +273,36 @@ const OTHER_SERVICES = [
   { href: "/odoo", label: "Odoo Solutions" },
 ];
 
+const SOC_LOGS = [
+  { t: "+00:04.12", src: "SIEM", msg: "correlation hit  T1059.001" },
+  { t: "+00:04.18", src: "XDR", msg: "endpoint 10.4.12.88  contained" },
+  { t: "+00:04.25", src: "FIM", msg: "/etc/shadow  hash mismatch" },
+  { t: "+00:04.31", src: "HIDS", msg: "privilege escalation  blocked" },
+  { t: "+00:04.37", src: "VA", msg: "CVE-2024-3400  ranked critical" },
+  { t: "+00:04.44", src: "XOAR", msg: "playbook SOC-17  executed" },
+  { t: "+00:04.51", src: "SIEM", msg: "lateral movement  T1021  flagged" },
+  { t: "+00:04.58", src: "XDR", msg: "beacon 185.22.9.4  dropped" },
+];
+
+const TICKER = [
+  "SIEM",
+  "XDR",
+  "HIDS",
+  "FIM",
+  "VA",
+  "XOAR",
+  "T1059.001",
+  "T1078",
+  "T1486",
+  "T1566.001",
+  "MITRE ATT&CK",
+  "PCI DSS",
+  "HIPAA",
+  "GDPR",
+  "24x7 SOC",
+  "THREAT HUNTING",
+];
+
 export default function CsecContent() {
   return (
     <div className="cx-page">
@@ -281,14 +312,28 @@ export default function CsecContent() {
       </noscript>
 
       {/* ---------------- Hero ---------------- */}
-      <section className="cx-hero">
+      <section className="cx-hero cx-hero--csec">
+        <CsecHeroFx />
+        <div className="cx-csec-hex" aria-hidden="true" />
+        <div className="cx-csec-scanlines" aria-hidden="true" />
+
         <div className="cx-container">
           <div className="cx-hero-grid">
             <div className="cx-hero-copy">
+              <div className="cx-csec-status" aria-hidden="true">
+                <span className="cx-csec-status-tag">SOC LIVE</span>
+                <span className="cx-csec-status-line">threat_feed :: active</span>
+                <span className="cx-csec-caret" />
+              </div>
               <span className="cx-eyebrow">Cybersecurity Excellence Center</span>
               <h1 className="cx-h1">
-                Catch the attack while it is still
-                <span className="cx-accent-text"> in progress</span>
+                Catch the attack while it is still{" "}
+                <span
+                  className="cx-accent-text cx-csec-glitch"
+                  data-text="in progress"
+                >
+                  in progress
+                </span>
               </h1>
               <p className="cx-lead">
                 SIEM, XDR, HIDS, FIM, VA and XOAR unified into one on-premises and
@@ -326,11 +371,40 @@ export default function CsecContent() {
             </div>
 
             <div className="cx-hero-visual">
-              <figure className="cx-hero-frame">
+              <figure className="cx-hero-frame cx-hero-frame--csec">
+                <span className="cx-csec-hud cx-csec-hud--tl" aria-hidden="true" />
+                <span className="cx-csec-hud cx-csec-hud--tr" aria-hidden="true" />
+                <span className="cx-csec-hud cx-csec-hud--bl" aria-hidden="true" />
+                <span className="cx-csec-hud cx-csec-hud--br" aria-hidden="true" />
                 <img
                   src="/assets/img/soc.webp"
                   alt="Security operations centre analysts monitoring dashboards"
                 />
+                <span className="cx-csec-frame-scan" aria-hidden="true" />
+                <div className="cx-csec-terminal" aria-hidden="true">
+                  <div className="cx-csec-terminal-head">
+                    <span>soc_console // stream</span>
+                    <span className="cx-csec-live">live</span>
+                  </div>
+                  <div className="cx-csec-terminal-body">
+                    <div className="cx-csec-terminal-track">
+                      {SOC_LOGS.map((log) => (
+                        <div className="cx-csec-log" key={`a-${log.t}`}>
+                          <span className="cx-csec-log-t">{log.t}</span>
+                          <span className="cx-csec-log-src">{log.src}</span>
+                          <span className="cx-csec-log-msg">{log.msg}</span>
+                        </div>
+                      ))}
+                      {SOC_LOGS.map((log) => (
+                        <div className="cx-csec-log" key={`b-${log.t}`}>
+                          <span className="cx-csec-log-t">{log.t}</span>
+                          <span className="cx-csec-log-src">{log.src}</span>
+                          <span className="cx-csec-log-msg">{log.msg}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
               </figure>
               <div className="cx-float-card">
                 <span className="cx-float-card-icon" aria-hidden="true">
@@ -344,6 +418,18 @@ export default function CsecContent() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+
+        <div className="cx-csec-ticker" aria-hidden="true">
+          <div className="cx-csec-ticker-track">
+            {[0, 1].map((copy) =>
+              TICKER.map((item) => (
+                <span className="cx-csec-ticker-item" key={`${copy}-${item}`}>
+                  {item}
+                </span>
+              )),
+            )}
           </div>
         </div>
       </section>

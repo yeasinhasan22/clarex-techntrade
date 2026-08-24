@@ -5336,56 +5336,70 @@ video {
 .logos_icon {
     width: 40px;
     height: 40px;
+    flex-shrink: 0;
 }
 
 .logos_partner {
     width: 130px;
     height: 30px;
+    object-fit: contain;
+    flex-shrink: 0;
 }
 
 .home3-partner-area .partner-wrapper {
     height: 100%;
     display: flex;
-    align-items: center
+    align-items: center;
+    overflow: hidden;
 }
 
-.home3-partner-area .partner-wrapper .marquee_text {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+.home3-partner-area .partner-marquee {
+    width: 100%;
+    overflow: hidden;
+}
+
+.home3-partner-area .partner-marquee-track {
+    display: flex;
+    width: max-content;
+    animation: partner-marquee-scroll 40s linear infinite;
+}
+
+.home3-partner-area .partner-marquee-group {
     display: flex;
     align-items: center;
     gap: 30px;
-    overflow: hidden
+    flex-shrink: 0;
+    padding-right: 30px;
 }
 
-.home3-partner-area .partner-wrapper .marquee_text .js-marquee {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    margin-right: 0
-}
-
-.home3-partner-area .partner-wrapper .marquee_text .js-marquee:last-child {
-    display: none;
-    visibility: hidden
-}
-
-.home3-partner-area .partner-wrapper .marquee_text .js-marquee img {
+.home3-partner-area .partner-marquee-group img {
     opacity: .6;
     transition: .2s;
-
 }
 
-.home3-partner-area .partner-wrapper .marquee_text .js-marquee img:hover {
+.home3-partner-area .partner-marquee-group img:hover {
     opacity: 1;
     transform: scale(1.1);
 }
 
-.home3-partner-area .partner-wrapper .marquee_text .js-marquee-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 30px
+@keyframes partner-marquee-scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.home3-partner-area .partner-wrapper:hover .partner-marquee-track {
+    animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .home3-partner-area .partner-marquee-track {
+        animation: none;
+    }
 }
 
 .swiper-btn-group {
