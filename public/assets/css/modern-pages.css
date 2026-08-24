@@ -67,7 +67,7 @@
     padding: 72px 0;
 }
 
-.cx-section + .cx-section {
+.cx-section+.cx-section {
     border-top: 1px solid var(--cx-line);
 }
 
@@ -260,8 +260,8 @@
 
 .cx-hero-grid {
     display: grid;
-    grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr);
-    gap: 64px;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: 48px;
     align-items: center;
 }
 
@@ -307,10 +307,10 @@
 .cx-hero-frame {
     position: relative;
     border-radius: var(--cx-radius-lg);
-    border: 1px solid var(--cx-line);
+    border: 1px solid var(--cx-line-strong);
     background: linear-gradient(160deg, #1b1d22 0%, #121317 100%);
-    padding: 12px;
-    box-shadow: 0 40px 90px -40px rgba(0, 0, 0, .9);
+    padding: 10px;
+    box-shadow: 0 30px 80px -25px rgba(0, 0, 0, .9), 0 0 40px -15px var(--cx-accent-soft);
 }
 
 .cx-hero-frame img {
@@ -358,7 +358,7 @@
 }
 
 /* Scoped to the caption so it cannot outrank .cx-float-card-icon. */
-.cx-float-card > div > span {
+.cx-float-card>div>span {
     font-size: .82rem;
     color: #8a8f99;
 }
@@ -1102,6 +1102,437 @@
 }
 
 /* --------------------------------------------------------------------------
+   Event Sponsorship  (.cx-event-*)
+   -------------------------------------------------------------------------- */
+
+/* Event meta row (date · venue · role) */
+.cx-event-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.cx-event-meta-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 18px;
+    border-radius: 12px;
+    border: 1px solid var(--cx-line);
+    background: rgba(255, 255, 255, .03);
+    font-size: .9rem;
+    color: var(--cx-body-bright);
+    font-weight: 500;
+}
+
+.cx-event-meta-item i {
+    font-size: 1rem;
+    color: var(--cx-accent);
+    flex: 0 0 auto;
+}
+
+/* Photo gallery column */
+.cx-event-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.cx-event-photo {
+    margin: 0;
+    padding: 0;
+    border-radius: var(--cx-radius-lg);
+    overflow: hidden;
+    border: 1px solid var(--cx-line-strong);
+    position: relative;
+    background: #14161a;
+}
+
+.cx-event-photo--btn {
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    text-align: left;
+    outline: none;
+    transition: border-color .3s ease, transform .3s ease, box-shadow .3s ease;
+}
+
+.cx-event-photo--btn:hover {
+    border-color: var(--cx-accent);
+    transform: translateY(-3px);
+    box-shadow: 0 16px 36px -12px rgba(0, 0, 0, .8), 0 0 24px -6px var(--cx-accent-soft);
+}
+
+.cx-event-photo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .5s cubic-bezier(.2, .7, .3, 1);
+}
+
+.cx-event-photo--btn:hover img {
+    transform: scale(1.05);
+}
+
+/* Hover overlay on photos */
+.cx-event-photo-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, .1) 0%, rgba(0, 0, 0, .75) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: #ffffff;
+    font-size: .86rem;
+    font-weight: 600;
+    letter-spacing: .02em;
+    opacity: 0;
+    backdrop-filter: blur(2px);
+    transition: opacity .3s ease;
+    z-index: 2;
+}
+
+.cx-event-photo-overlay i {
+    font-size: 1.15rem;
+    color: var(--cx-accent);
+}
+
+.cx-event-photo--btn:hover .cx-event-photo-overlay {
+    opacity: 1;
+}
+
+/* Main (tall) photo */
+.cx-event-photo--main {
+    height: 290px;
+}
+
+/* Two smaller photos side by side */
+.cx-event-photo-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.cx-event-photo-row .cx-event-photo {
+    height: 170px;
+}
+
+/* --------------------------------------------------------------------------
+   Modal Popup for Event Photos
+   -------------------------------------------------------------------------- */
+
+.cx-modal-overlay {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background: rgba(6, 8, 12, .88);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    animation: cxFadeIn .22s ease-out;
+}
+
+.cx-modal-card {
+    position: relative;
+    width: 100%;
+    max-width: 960px;
+    max-height: 92vh;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, .12);
+    background: linear-gradient(160deg, #181a20 0%, #0e1014 100%);
+    box-shadow: 0 32px 90px -20px rgba(0, 0, 0, .95), 0 0 40px -15px rgba(161, 199, 64, .15);
+    overflow: hidden;
+    animation: cxScaleUp .28s cubic-bezier(.2, .7, .3, 1);
+    /* explicit base colour — portaled outside .cx-page so CSS vars may not resolve */
+    color: #ffffff;
+}
+
+/* Modal top accent stripe */
+.cx-modal-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #a1c740 0%, #3bc0bd 100%);
+    z-index: 5;
+}
+
+/* Modal Header */
+.cx-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 20px 24px 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, .08);
+    background: rgba(255, 255, 255, .015);
+}
+
+.cx-modal-title-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.cx-modal-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: #a1c740;
+}
+
+.cx-modal-badge i {
+    font-size: .75rem;
+}
+
+.cx-modal-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0;
+    letter-spacing: -.01em;
+}
+
+.cx-modal-location {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: .8rem;
+    color: #a0a5b0;
+}
+
+.cx-modal-location i {
+    color: #3bc0bd;
+}
+
+.cx-modal-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.cx-modal-counter {
+    font-size: .78rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    padding: 5px 12px;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, .06);
+    border: 1px solid rgba(255, 255, 255, .1);
+    color: #e0e3e8;
+}
+
+.cx-modal-close-btn {
+    display: grid;
+    place-items: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: 1px solid var(--cx-line-strong);
+    background: rgba(255, 255, 255, .06);
+    color: #ffffff;
+    font-size: 1.05rem;
+    cursor: pointer;
+    transition: background .2s ease, border-color .2s ease, color .2s ease, transform .2s ease;
+}
+
+.cx-modal-close-btn:hover {
+    background: var(--cx-accent);
+    border-color: var(--cx-accent);
+    color: #000000;
+    transform: rotate(90deg);
+}
+
+/* Modal Showcase View */
+.cx-modal-showcase {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 20px;
+    background: #08090b;
+    min-height: 320px;
+    max-height: 54vh;
+    overflow: hidden;
+}
+
+.cx-modal-img-frame {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    max-height: 52vh;
+}
+
+.cx-modal-img {
+    display: block;
+    max-width: 100%;
+    max-height: 50vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: 0 16px 40px -12px rgba(0, 0, 0, .8);
+}
+
+/* Prev / Next buttons inside showcase */
+.cx-modal-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1px solid var(--cx-line-strong);
+    background: rgba(18, 20, 26, .85);
+    color: #ffffff;
+    display: grid;
+    place-items: center;
+    font-size: 1.25rem;
+    cursor: pointer;
+    backdrop-filter: blur(8px);
+    transition: background .2s ease, border-color .2s ease, color .2s ease, transform .2s ease;
+}
+
+.cx-modal-nav:hover {
+    background: var(--cx-accent);
+    border-color: var(--cx-accent);
+    color: #000000;
+    transform: translateY(-50%) scale(1.08);
+}
+
+.cx-modal-nav--prev {
+    left: 18px;
+}
+
+.cx-modal-nav--next {
+    right: 18px;
+}
+
+/* Modal Footer */
+.cx-modal-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px 24px 20px;
+    border-top: 1px solid rgba(255, 255, 255, .08);
+    background: rgba(255, 255, 255, .015);
+}
+
+.cx-modal-caption {
+    font-size: .88rem;
+    color: #c8cdd6;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Thumbnail selector strip */
+.cx-modal-thumbs {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cx-modal-thumb-btn {
+    flex: 0 0 68px;
+    height: 48px;
+    padding: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 2px solid rgba(255, 255, 255, .1);
+    background: #000000;
+    cursor: pointer;
+    opacity: .6;
+    transition: opacity .2s ease, border-color .2s ease, transform .2s ease;
+}
+
+.cx-modal-thumb-btn img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.cx-modal-thumb-btn:hover {
+    opacity: 1;
+    border-color: var(--cx-line-strong);
+    transform: translateY(-2px);
+}
+
+.cx-modal-thumb-btn.is-active {
+    opacity: 1;
+    border-color: var(--cx-accent);
+    box-shadow: 0 0 12px -2px var(--cx-accent-soft);
+    transform: scale(1.04);
+}
+
+@keyframes cxFadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes cxScaleUp {
+    from {
+        opacity: 0;
+        transform: scale(.96) translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+@media (max-width: 767px) {
+    .cx-modal-overlay {
+        padding: 12px;
+    }
+
+    .cx-modal-card {
+        max-height: 96vh;
+    }
+
+    .cx-modal-header {
+        padding: 16px 18px 12px;
+    }
+
+    .cx-modal-title {
+        font-size: 1.05rem;
+    }
+
+    .cx-modal-showcase {
+        min-height: 240px;
+        padding: 12px 10px;
+    }
+
+    .cx-modal-footer {
+        padding: 12px 16px 16px;
+    }
+}
+
+/* --------------------------------------------------------------------------
    Project Showcase  (.cx-ps-*)
    -------------------------------------------------------------------------- */
 
@@ -1245,7 +1676,9 @@
     object-fit: contain;
 }
 
-.cx-ps-panel-title-group { flex: 1; }
+.cx-ps-panel-title-group {
+    flex: 1;
+}
 
 .cx-ps-panel-badges {
     display: flex;
@@ -1565,5 +1998,17 @@
 
     .cx-ps-deliverables li {
         padding: 11px 16px;
+    }
+
+    .cx-event-photo--main {
+        height: 220px;
+    }
+
+    .cx-event-photo-row {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .cx-event-photo-row .cx-event-photo {
+        height: 180px;
     }
 }

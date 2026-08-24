@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import ModernPageEffects from "@/components/modern/ModernPageEffects";
 import ProjectTabs from "@/components/modern/ProjectTabs";
+import EventGallery from "@/components/modern/EventGallery";
 
 const MODULES = [
   { label: "ERP", icon: "bi bi-diagram-3" },
@@ -146,6 +147,33 @@ const REGIONS = [
 
 const PROJECTS = [
   {
+    id: "trt-arredo",
+    name: "TRT ARREDO",
+    logo: "/assets/img/logos/TRT_ARREDO_LOGO.png",
+    industry: "Manufacturing & Design",
+    country: "Nigeria",
+    tagline: "Odoo 17 → 19 migration across 15 modules, full HR automation with Nigerian PAYE/Pension rules and project management workflows.",
+    deliverables: [
+      "Odoo 17 to Odoo 19 database migration and system upgrade",
+      "End-to-end data migration, validation, and live database cutover",
+      "Odoo 19 configuration and optimization across 15 modules",
+      "Sales and quotation management with BOM-based costing",
+      "Purchase and procurement management",
+      "Inventory and warehouse management",
+      "Manufacturing, BOM, and production workflow configuration",
+      "Accounting, invoicing, and financial controls",
+      "Automated payroll with Nigerian PAYE and Pension rules",
+      "Employee attendance, Time Off, and HR management",
+      "Multi-level employee appraisal workflows",
+      "Project management, SOP workflows, and profitability dashboards",
+      "Migration of design workflows from ClickUp to Odoo",
+      "Digital design briefs and centralized document management",
+      "Role-based access control and security",
+      "Chatter/Discuss, notifications, and business process automation",
+      "Management dashboards, reporting, and analytics",
+    ],
+  },
+  {
     id: "la-mesa",
     name: "LA MESA",
     logo: "/assets/img/logos/La Mesa Logo.png",
@@ -187,24 +215,6 @@ const PROJECTS = [
     ],
   },
   {
-    id: "marvel-be-you",
-    name: "Marvel Be You",
-    logo: "/assets/img/logos/marvel-logo.webp",
-    industry: "Professional Services",
-    country: "Bangladesh",
-    tagline: "Full CRM build-out — pipeline, sales stages, activity automation and custom reporting for a brand consultancy.",
-    deliverables: [
-      "Lead and opportunity management",
-      "CRM pipeline and sales stage configuration",
-      "Role-based access control and user security",
-      "Sales team and user configuration",
-      "CRM activity and follow-up automation",
-      "Customer and brand relationship management",
-      "Customized CRM workflows",
-      "CRM reporting and pipeline visibility",
-    ],
-  },
-  {
     id: "presswayy",
     name: "Presswayy",
     logo: "/assets/img/logos/presswayy-logo.png",
@@ -225,30 +235,21 @@ const PROJECTS = [
     ],
   },
   {
-    id: "trt-arredo",
-    name: "TRT ARREDO",
-    logo: "/assets/img/logos/TRT_ARREDO_LOGO.png",
-    industry: "Manufacturing & Design",
-    country: "Nigeria",
-    tagline: "Odoo 17 → 19 migration across 15 modules, full HR automation with Nigerian PAYE/Pension rules and project management workflows.",
+    id: "marvel-be-you",
+    name: "Marvel Be You",
+    logo: "/assets/img/logos/marvel-logo.webp",
+    industry: "Professional Services",
+    country: "Bangladesh",
+    tagline: "Full CRM build-out — pipeline, sales stages, activity automation and custom reporting for a brand consultancy.",
     deliverables: [
-      "Odoo 17 to Odoo 19 database migration and system upgrade",
-      "End-to-end data migration, validation, and live database cutover",
-      "Odoo 19 configuration and optimization across 15 modules",
-      "Sales and quotation management with BOM-based costing",
-      "Purchase and procurement management",
-      "Inventory and warehouse management",
-      "Manufacturing, BOM, and production workflow configuration",
-      "Accounting, invoicing, and financial controls",
-      "Automated payroll with Nigerian PAYE and Pension rules",
-      "Employee attendance, Time Off, and HR management",
-      "Multi-level employee appraisal workflows",
-      "Project management, SOP workflows, and profitability dashboards",
-      "Migration of design workflows from ClickUp to Odoo",
-      "Digital design briefs and centralized document management",
-      "Role-based access control and security",
-      "Chatter/Discuss, notifications, and business process automation",
-      "Management dashboards, reporting, and analytics",
+      "Lead and opportunity management",
+      "CRM pipeline and sales stage configuration",
+      "Role-based access control and user security",
+      "Sales team and user configuration",
+      "CRM activity and follow-up automation",
+      "Customer and brand relationship management",
+      "Customized CRM workflows",
+      "CRM reporting and pipeline visibility",
     ],
   },
 ];
@@ -260,6 +261,24 @@ const VERTICALS = [
   "Distribution & Supply Chain",
   "Healthcare",
   "Education",
+];
+
+const EVENT_IMAGES = [
+  {
+    src: "/assets/img/odoo-images/odoo-1.jpeg",
+    alt: "CLAREx team at the Odoo Partner Event, Radisson Blu Chittagong",
+    caption: "CLAREx Tech & Trade sponsoring the Odoo Partner Event at Radisson Blu Chittagong (January 2025)",
+  },
+  {
+    src: "/assets/img/odoo-images/odoo-2.jpg",
+    alt: "Odoo partner event session, January 2025",
+    caption: "Official Odoo event session & ecosystem discussions at Radisson Blu Chittagong",
+  },
+  {
+    src: "/assets/img/odoo-images/odoo-3.jpeg",
+    alt: "CLAREx sponsoring the Odoo event, Radisson Blu Chittagong",
+    caption: "CLAREx Tech & Trade official partner sponsorship showcase",
+  },
 ];
 
 const OTHER_SERVICES = [
@@ -322,7 +341,7 @@ export default function OdooContent() {
                 </span>
                 <span className="cx-chip">
                   <i className="bi bi-trophy" aria-hidden="true" />
-                  5 projects completed
+                  10+ projects completed
                 </span>
               </div>
             </div>
@@ -330,17 +349,17 @@ export default function OdooContent() {
             <div className="cx-hero-visual">
               <figure className="cx-hero-frame">
                 <img
-                  src="/assets/img/odoopartner.png"
-                  alt="CLAREx Tech & Trade as an official Odoo partner"
+                  src="/assets/img/odoo-images/odoo-1.jpeg"
+                  alt="CLAREx Tech & Trade sponsoring the Odoo partner event at Radisson Blu Chittagong"
                 />
               </figure>
               <div className="cx-float-card">
                 <span className="cx-float-card-icon" aria-hidden="true">
-                  <i className="bi bi-patch-check" />
+                  <i className="bi bi-star-fill" />
                 </span>
                 <div>
-                  <strong>Odoo 16 Certified</strong>
-                  <span>Validated to Odoo standards</span>
+                  <strong>Official Event Sponsor</strong>
+                  <span>Odoo Partner Event · Jan 2025</span>
                 </div>
               </div>
             </div>
@@ -353,6 +372,7 @@ export default function OdooContent() {
         <div className="cx-container">
           <div className="cx-subnav-inner">
             <a href="#projects">Projects</a>
+            <a href="#event">Event</a>
             <a href="#partnership">Partnership</a>
             <a href="#modules">Modules</a>
             <a href="#approach">Approach</a>
@@ -368,7 +388,7 @@ export default function OdooContent() {
         <div className="cx-container">
           <div className="cx-stats cx-reveal">
             <div className="cx-stat">
-              <div className="cx-stat-value">5</div>
+              <div className="cx-stat-value">10+</div>
               <p className="cx-stat-label">Projects successfully delivered</p>
             </div>
             <div className="cx-stat">
@@ -405,6 +425,52 @@ export default function OdooContent() {
           </header>
           <div className="cx-reveal">
             <ProjectTabs projects={PROJECTS} />
+          </div>
+        </div>
+      </section>
+
+      {/* ---------------- Event Sponsorship ---------------- */}
+      <section className="cx-section" id="event">
+        <div className="cx-container">
+          <div className="cx-split cx-reveal">
+            {/* Left: copy */}
+            <div>
+              <span className="cx-eyebrow">Community &amp; events</span>
+              <h2 className="cx-h2" style={{ marginTop: "18px" }}>
+                Official sponsor at the Odoo Partner Event
+              </h2>
+              <p className="cx-lead" style={{ marginTop: "20px" }}>
+                In January 2025, CLAREx Tech &amp; Trade proudly sponsored the
+                Odoo Partner Event held at <strong>Radisson Blu Chittagong</strong> —
+                one of Bangladesh&apos;s premier Odoo community gatherings bringing
+                together partners, consultants and business leaders.
+              </p>
+              <p className="cx-body" style={{ marginTop: "16px" }}>
+                Our participation as an official partner sponsor reflects our
+                commitment to the Odoo ecosystem, to the local tech community, and
+                to staying at the forefront of ERP innovation in Bangladesh and
+                beyond.
+              </p>
+              <div className="cx-event-meta" style={{ marginTop: "32px" }}>
+                <div className="cx-event-meta-item">
+                  <i className="bi bi-calendar-event" aria-hidden="true" />
+                  <span>January 2025</span>
+                </div>
+                <div className="cx-event-meta-item">
+                  <i className="bi bi-geo-alt-fill" aria-hidden="true" />
+                  <span>Radisson Blu, Chittagong</span>
+                </div>
+                <div className="cx-event-meta-item">
+                  <i className="bi bi-people-fill" aria-hidden="true" />
+                  <span>Official Partner Sponsor</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Right: interactive photo gallery */}
+            <div className="cx-reveal">
+              <EventGallery images={EVENT_IMAGES} />
+            </div>
           </div>
         </div>
       </section>
