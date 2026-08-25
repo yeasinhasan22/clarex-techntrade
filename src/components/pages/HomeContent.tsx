@@ -11,6 +11,7 @@ const COLLABORATOR_LOGOS = [
   { src: "/assets/img/logos/Picture9.png", alt: "NATIVEsoc" },
   { src: "/assets/img/logos/SentinelOne-logo.png", alt: "SentinelOne" },
   { src: "/assets/img/logos/Splunk_logo.webp", alt: "Splunk" },
+  { src: "/assets/img/logos/Samsung_Knox_Logo.png", alt: "Samsung Knox" },
 ] as const;
 
 function CollaboratorStrip({ labelled }: { labelled: boolean }) {
@@ -81,7 +82,7 @@ export default function HomeContent() {
                                   </div>
                               </div>
                               <div className="banner-image magnetic-item">
-                                  <img className="img-fluid" src="/assets/img/odoo-images/odoo-home-banner.png" alt="" />
+                                  <img className="img-fluid" src="/assets/img/odoo-images/odoo-home-banner.webp" alt="" />
                               </div>
                               <div className="banner-video-area">
                                   <div className="video-area">
@@ -150,7 +151,7 @@ export default function HomeContent() {
                                 
                                       <svg width="30" height="34" viewBox="0 0 30 34" xmlns="http://www.w3.org/2000/svg">
                                           <path opacity="0.3" d="M30 17.0012C30 16.0359 29.4735 15.1469 28.5906 14.6218L4.75661 0.46019C3.79257 -0.111681 2.61693 -0.153462 1.60777 0.351093C0.601772 0.855365 0 1.78612 0 2.83996V31.1609C0 32.2148 0.601723 33.1452 1.60931 33.6498C2.079 33.8837 2.5828 34 3.08665 34C3.66595 34 4.24144 33.8456 4.75628 33.5407L28.5903 19.3813C29.4734 18.8559 30 17.9669 30 17.0016V17.0012ZM27.7302 18.1537L3.89624 32.3131C3.42844 32.5905 2.85862 32.6093 2.36997 32.3668C1.88133 32.1225 1.58884 31.6719 1.58884 31.1607V2.83969C1.58884 2.32846 1.88133 1.8761 2.36997 1.63359C2.59834 1.52102 2.84346 1.46385 3.08699 1.46385C3.36811 1.46385 3.64734 1.53842 3.89658 1.68755L27.7306 15.8492C28.1646 16.1074 28.4135 16.5287 28.4135 17.0033C28.4131 17.4763 28.1642 17.8955 27.7302 18.1537Z" />
-                                      </svg><img className="video-img " src="/assets/img/odoo-images/odoo-home-banner.png" alt="" />
+                                      </svg><img className="video-img " src="/assets/img/odoo-images/odoo-home-banner.webp" alt="" />
                                   </div>
                               </div>
                           </div>
@@ -158,6 +159,33 @@ export default function HomeContent() {
                   </div>
               </div>
           </div>
+
+
+          <section className="home-knox-bar" id="home-knox-bar" aria-labelledby="home-knox-bar-title">
+              <div className="container-fluid">
+                  <div className="home-knox-bar-inner">
+                      <div className="home-knox-bar-brand">
+                          <img
+                              src="/assets/img/logos/Samsung_Knox_Logo.png"
+                              alt="Samsung Knox"
+                              className="home-knox-bar-logo"
+                          />
+                      </div>
+                      <div className="home-knox-bar-copy">
+                          <span className="home-knox-bar-eyebrow">Official Partnership</span>
+                          <h3 id="home-knox-bar-title">CLAREx Tech &amp; Trade × Samsung Knox</h3>
+                          <p>
+                              Bangladesh&apos;s only Samsung Knox license reseller — 4,000+ enterprise
+                              MDM licenses delivered in the last year.
+                          </p>
+                      </div>
+                      <a className="home-knox-bar-btn" href="/samsungknox">
+                          Learn about Knox
+                          <i className="bi bi-arrow-right" aria-hidden="true" />
+                      </a>
+                  </div>
+              </div>
+          </section>
 
 
           <div className="home3-partner-area" id="home3-partner-area">

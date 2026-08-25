@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import ModernPageEffects from "@/components/modern/ModernPageEffects";
+import OdooHeroFx from "@/components/modern/OdooHeroFx";
 import ProjectTabs from "@/components/modern/ProjectTabs";
 import EventGallery from "@/components/modern/EventGallery";
 
@@ -265,17 +266,17 @@ const VERTICALS = [
 
 const EVENT_IMAGES = [
   {
-    src: "/assets/img/odoo-images/odoo-1.jpeg",
+    src: "/assets/img/odoo-images/odoo-1.webp",
     alt: "CLAREx team at the Odoo Partner Event, Radisson Blu Chittagong",
     caption: "CLAREx Tech & Trade sponsoring the Odoo Partner Event at Radisson Blu Chittagong (January 2025)",
   },
   {
-    src: "/assets/img/odoo-images/odoo-2.jpg",
+    src: "/assets/img/odoo-images/odoo-2.webp",
     alt: "Odoo partner event session, January 2025",
     caption: "Official Odoo event session & ecosystem discussions at Radisson Blu Chittagong",
   },
   {
-    src: "/assets/img/odoo-images/odoo-3.jpeg",
+    src: "/assets/img/odoo-images/odoo-3.webp",
     alt: "CLAREx sponsoring the Odoo event, Radisson Blu Chittagong",
     caption: "CLAREx Tech & Trade official partner sponsorship showcase",
   },
@@ -292,6 +293,43 @@ const OTHER_SERVICES = [
   { href: "/service2", label: "Infrastructure and Network" },
 ];
 
+const SYNC_EVENTS = [
+  { module: "Sales", event: "SO-1042 confirmed → Inventory reserved" },
+  { module: "Inventory", event: "Stock move posted · WH/OUT/0891" },
+  { module: "Accounting", event: "Invoice INV/2025/0142 auto-posted" },
+  { module: "CRM", event: "Lead qualified · pipeline stage updated" },
+  { module: "Purchase", event: "PO-331 received · bill matched" },
+  { module: "Manufacturing", event: "MO-220 completed · BOM consumed" },
+  { module: "HR", event: "Payslip batch validated · 48 employees" },
+  { module: "eCommerce", event: "Shopify order #8821 synced" },
+];
+
+const ORBIT_MODULES = [
+  { label: "CRM", icon: "bi bi-person-badge", style: { top: "6%", left: "8%" } },
+  { label: "Sales", icon: "bi bi-graph-up-arrow", style: { top: "18%", right: "4%" } },
+  { label: "Inventory", icon: "bi bi-box-seam", style: { bottom: "22%", right: "6%" } },
+  { label: "Accounting", icon: "bi bi-cash-coin", style: { top: "32%", left: "-2%" } },
+];
+
+const ODOO_TICKER = [
+  "ERP",
+  "CRM",
+  "Accounting",
+  "Inventory",
+  "Sales",
+  "Purchase",
+  "Manufacturing",
+  "eCommerce",
+  "Human Resources",
+  "Projects",
+  "Odoo 16 Certified",
+  "Modular Suite",
+  "One Database",
+  "Real-time Sync",
+  "Workflow Automation",
+  "Global Delivery",
+];
+
 export default function OdooContent() {
   return (
     <div className="cx-page">
@@ -301,14 +339,23 @@ export default function OdooContent() {
       </noscript>
 
       {/* ---------------- Hero ---------------- */}
-      <section className="cx-hero">
+      <section className="cx-hero cx-hero--odoo">
+        <OdooHeroFx />
+        <div className="cx-odoo-appgrid" aria-hidden="true" />
+        <div className="cx-odoo-bloom" aria-hidden="true" />
+
         <div className="cx-container">
           <div className="cx-hero-grid">
             <div className="cx-hero-copy">
+              <div className="cx-odoo-status" aria-hidden="true">
+                <span className="cx-odoo-status-tag">Odoo Partner</span>
+                <span className="cx-odoo-status-line">modules :: syncing</span>
+                <span className="cx-odoo-sync-dot" />
+              </div>
               <span className="cx-eyebrow">Odoo Solutions</span>
               <h1 className="cx-h1">
-                ERP that fits how your business
-                <span className="cx-accent-text"> actually runs</span>
+                ERP that fits how your business{" "}
+                <span className="cx-accent-text cx-odoo-shimmer">actually runs</span>
               </h1>
               <p className="cx-lead">
                 Odoo implementation, customisation and support from a certified
@@ -347,13 +394,48 @@ export default function OdooContent() {
             </div>
 
             <div className="cx-hero-visual">
-              <figure className="cx-hero-frame">
+              {ORBIT_MODULES.map((mod) => (
+                <span
+                  key={mod.label}
+                  className="cx-odoo-orbit"
+                  style={mod.style}
+                  aria-hidden="true"
+                >
+                  <i className={mod.icon} />
+                  {mod.label}
+                </span>
+              ))}
+
+              <figure className="cx-hero-frame cx-hero-frame--odoo">
                 <img
-                  src="/assets/img/odoo-images/odoo-1.jpeg"
+                  src="/assets/img/odoo-images/odoo-1.webp"
                   alt="CLAREx Tech & Trade sponsoring the Odoo partner event at Radisson Blu Chittagong"
                 />
+                <div className="cx-odoo-feed" aria-hidden="true">
+                  <div className="cx-odoo-feed-head">
+                    <span>erp_sync // live</span>
+                    <span className="cx-odoo-feed-live">connected</span>
+                  </div>
+                  <div className="cx-odoo-feed-body">
+                    <div className="cx-odoo-feed-track">
+                      {SYNC_EVENTS.map((row) => (
+                        <div className="cx-odoo-feed-row" key={`a-${row.module}`}>
+                          <span className="cx-odoo-feed-mod">{row.module}</span>
+                          <span className="cx-odoo-feed-msg">{row.event}</span>
+                        </div>
+                      ))}
+                      {SYNC_EVENTS.map((row) => (
+                        <div className="cx-odoo-feed-row" key={`b-${row.module}`}>
+                          <span className="cx-odoo-feed-mod">{row.module}</span>
+                          <span className="cx-odoo-feed-msg">{row.event}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
               </figure>
-              <div className="cx-float-card">
+
+              <div className="cx-float-card cx-float-card--odoo">
                 <span className="cx-float-card-icon" aria-hidden="true">
                   <i className="bi bi-star-fill" />
                 </span>
@@ -363,6 +445,18 @@ export default function OdooContent() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+
+        <div className="cx-odoo-ticker" aria-hidden="true">
+          <div className="cx-odoo-ticker-track">
+            {[0, 1].map((copy) =>
+              ODOO_TICKER.map((item) => (
+                <span className="cx-odoo-ticker-item" key={`${copy}-${item}`}>
+                  {item}
+                </span>
+              )),
+            )}
           </div>
         </div>
       </section>

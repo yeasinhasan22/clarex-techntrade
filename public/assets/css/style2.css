@@ -5400,6 +5400,164 @@ video {
     .home3-partner-area .partner-marquee-track {
         animation: none;
     }
+
+    .home-knox-bar::before {
+        animation: none;
+    }
+}
+
+/* Samsung Knox partnership bar — home page (Clarex light theme) */
+.home-knox-bar {
+    position: relative;
+    overflow: hidden;
+    padding: 28px 65px;
+    background: linear-gradient(135deg, #f4f8ea 0%, #eef7f6 55%, #ffffff 100%);
+    border-top: 1px solid rgba(161, 199, 64, .28);
+    border-bottom: 1px solid rgba(59, 192, 189, .2);
+}
+
+.home-knox-bar::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(105deg, transparent 0%, rgba(161, 199, 64, .12) 48%, transparent 100%);
+    animation: home-knox-shimmer 7s ease-in-out infinite;
+    pointer-events: none;
+}
+
+.home-knox-bar::after {
+    content: "";
+    position: absolute;
+    top: -120px;
+    right: -80px;
+    width: 340px;
+    height: 340px;
+    background: radial-gradient(circle, rgba(59, 192, 189, .14) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.home-knox-bar-inner {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.home-knox-bar-brand {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 18px;
+    border-radius: 12px;
+    border: 1px solid rgba(161, 199, 64, .28);
+    background: #ffffff;
+    box-shadow: 0 10px 28px -16px rgba(0, 0, 0, .2);
+}
+
+.home-knox-bar-logo {
+    height: 36px;
+    width: auto;
+    display: block;
+}
+
+.home-knox-bar-copy {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.home-knox-bar-eyebrow {
+    display: inline-block;
+    margin-bottom: 6px;
+    font-size: .72rem;
+    font-weight: 600;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--theme-color);
+}
+
+.home-knox-bar-copy h3 {
+    margin: 0;
+    font-family: var(--font-saira);
+    font-size: clamp(1.15rem, 2.2vw, 1.55rem);
+    font-weight: 700;
+    line-height: 1.25;
+    color: #1d1d1d;
+}
+
+.home-knox-bar-copy p {
+    margin: 8px 0 0;
+    font-size: .94rem;
+    line-height: 1.55;
+    color: #4a4f57;
+    max-width: 640px;
+}
+
+.home-knox-bar-btn {
+    flex: 0 0 auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 24px;
+    border-radius: 10px;
+    background: var(--theme-color);
+    color: #000000;
+    font-family: var(--font-saira);
+    font-size: .95rem;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: transform .3s ease, box-shadow .3s ease, background-color .3s ease, color .3s ease;
+    box-shadow: 0 12px 30px -14px rgba(161, 199, 64, .45);
+}
+
+.home-knox-bar-btn:hover {
+    transform: translateY(-2px);
+    background: var(--theme-color-hover);
+    color: #000000;
+    box-shadow: 0 16px 36px -14px rgba(59, 192, 189, .45);
+}
+
+.home-knox-bar-btn i {
+    transition: transform .3s ease;
+}
+
+.home-knox-bar-btn:hover i {
+    transform: translateX(3px);
+}
+
+@keyframes home-knox-shimmer {
+    0%, 100% { transform: translateX(-120%); opacity: 0; }
+    45%, 55% { opacity: 1; }
+    100% { transform: translateX(120%); }
+}
+
+@media (max-width: 991px) {
+    .home-knox-bar {
+        padding: 24px 35px;
+    }
+
+    .home-knox-bar-inner {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .home-knox-bar-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 767px) {
+    .home-knox-bar {
+        padding: 22px 18px;
+    }
+
+    .home-knox-bar-brand {
+        width: 100%;
+        justify-content: flex-start;
+    }
 }
 
 .swiper-btn-group {

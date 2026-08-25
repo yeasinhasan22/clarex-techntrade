@@ -111,6 +111,9 @@ export default function Header() {
                       <li className={isActive('/odoo') ? 'menu-item active' : 'menu-item'}>
                           <a href="/odoo">Odoo Solutions</a>
                       </li>
+                      <li className={isActive('/samsungknox') ? 'menu-item active' : 'menu-item'}>
+                          <a href="/samsungknox">Samsung Knox</a>
+                      </li>
                       <li className={isActive('/contact') ? 'menu-item active' : 'menu-item'}>
                           <a href="/contact">Contact us</a>
                       </li>
