@@ -36,6 +36,7 @@ const EDGES: Edge[] = [
 /**
  * Decorative module network for the /odoo hero — nodes, sync pulses and
  * data packets moving along edges. Pauses off-screen / reduced motion.
+ * Colors: primary teal, secondary lime.
  */
 export default function OdooHeroFx() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -122,7 +123,7 @@ export default function OdooHeroFx() {
         const py = from.y + (to.y - from.y) * packet.t;
         ctx.beginPath();
         ctx.arc(px, py, 2.4, 0, Math.PI * 2);
-        ctx.fillStyle = "rgba(161, 199, 64, 0.85)";
+        ctx.fillStyle = "rgba(59, 192, 189, 0.9)";
         ctx.fill();
       });
 
@@ -139,7 +140,7 @@ export default function OdooHeroFx() {
         ctx.arc(pos.x, pos.y, r, 0, Math.PI * 2);
         ctx.fillStyle = "rgba(20, 22, 26, 0.72)";
         ctx.fill();
-        ctx.strokeStyle = `rgba(161, 199, 64, ${0.45 + pulse * 0.35})`;
+        ctx.strokeStyle = `rgba(59, 192, 189, ${0.45 + pulse * 0.35})`;
         ctx.lineWidth = 1.4;
         ctx.stroke();
 

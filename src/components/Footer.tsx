@@ -9,7 +9,7 @@ export default function Footer() {
                           <div className="col-lg-12">
                               <div className="footer-top-content">
                                   <div className="footer-logo">
-                                      <a href="/"><img className="img-fluid" src="/assets/img/clarex-techntrade.png" height="15px" width="140px" alt="CLAREx Tech & Trade" /></a>
+                                      <a href="/"><img className="img-fluid" src="/assets/img/clarex-techntrade.png" height="15px" width="180px" alt="CLAREx Tech & Trade" /></a>
                                   </div>
                                   <div className="footer-contect">
                                       <div className="icon">

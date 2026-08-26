@@ -80,7 +80,7 @@ export default function CsecHeroFx() {
         const x = i * colW;
         ctx.fillStyle = "rgba(210, 240, 140, 0.55)";
         ctx.fillText(glyph, x, col.y);
-        ctx.fillStyle = "rgba(161, 199, 64, 0.16)";
+        ctx.fillStyle = "rgba(59, 192, 189, 0.16)";
         ctx.fillText(glyph, x, col.y - fontSize * 1.15);
         col.y += col.speed * fontSize * 0.62;
         if (col.y > h + fontSize * 2) {

@@ -110,7 +110,7 @@ const TICKER = [
   "E-FOTA",
   "Knox Suite",
   "MDM",
-  "4,000+ Licenses",
+  "16,000+ Licenses",
   "Only Reseller in BD",
   "Defense-grade Security",
   "Android Enterprise",
@@ -159,7 +159,7 @@ export default function SamsungKnoxContent() {
                 Samsung Knox is the enterprise platform for configuring, securing,
                 and managing mobile devices. CLAREx Tech &amp; Trade is
                 Bangladesh&apos;s only authorized Knox license reseller —
-                4,000+ licenses delivered in the last year.
+                16,000+ licenses delivered in the last year.
               </p>
               <div className="cx-btn-row">
                 <a className="cx-btn cx-btn--primary" href="/contact">
@@ -178,7 +178,7 @@ export default function SamsungKnoxContent() {
                 </span>
                 <span className="cx-chip">
                   <i className="bi bi-phone" aria-hidden="true" />
-                  4,000+ licenses / year
+                  16,000+ licenses / year
                 </span>
                 <span className="cx-chip">
                   <i className="bi bi-shield-check" aria-hidden="true" />
@@ -234,7 +234,7 @@ export default function SamsungKnoxContent() {
                   <i className="bi bi-award" />
                 </span>
                 <div>
-                  <strong>4,000+ licenses</strong>
+                  <strong>16,000+ licenses</strong>
                   <span>Sold in the last 12 months</span>
                 </div>
               </div>
@@ -274,7 +274,7 @@ export default function SamsungKnoxContent() {
           <div className="cx-stats cx-reveal">
             <div className="cx-stat">
               <div className="cx-stat-value">
-                4,000<em>+</em>
+                16,000<em>+</em>
               </div>
               <p className="cx-stat-label">
                 Knox licenses sold by CLAREx in the last 12 months
@@ -355,7 +355,7 @@ export default function SamsungKnoxContent() {
                 Knox license reseller in Bangladesh.
               </p>
               <p className="cx-body cx-body--sm" style={{ marginTop: "16px" }}>
-                Over the past year we have sold more than 4,000 Knox licenses to
+                Over the past year we have sold more than 16,000 Knox licenses to
                 organizations rolling out secured mobile fleets across banking,
                 manufacturing, retail, logistics, and corporate IT.
               </p>

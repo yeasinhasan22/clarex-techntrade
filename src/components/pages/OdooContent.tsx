@@ -40,45 +40,68 @@ const PHASES = [
   },
 ];
 
+const SERVICE_PHASES = [
+  { id: "discover", label: "Discover", hint: "Find the gaps" },
+  { id: "build", label: "Build", hint: "Shape the system" },
+  { id: "launch", label: "Launch", hint: "Go live cleanly" },
+  { id: "sustain", label: "Sustain", hint: "Keep it running" },
+];
+
 const SERVICES = [
   {
     title: "Analysis",
     icon: "bi bi-bar-chart-line",
+    phase: "discover",
+    phaseLabel: "Discover",
     body: "Business and technical analysis that surfaces where the real improvements are.",
   },
   {
     title: "Configuration",
     icon: "bi bi-gear",
+    phase: "discover",
+    phaseLabel: "Discover",
     body: "Setup and configuration of standard modules, tuned for performance.",
   },
   {
     title: "Customization",
     icon: "bi bi-sliders",
+    phase: "build",
+    phaseLabel: "Build",
     body: "Adapting existing solutions to match requirements the standard build does not cover.",
   },
   {
     title: "Development",
     icon: "bi bi-code-slash",
+    phase: "build",
+    phaseLabel: "Build",
     body: "Custom modules and software built around your business objectives.",
   },
   {
     title: "Integration",
     icon: "bi bi-plug",
+    phase: "build",
+    phaseLabel: "Build",
     body: "Connecting Odoo to the systems you already run so work flows between them.",
   },
   {
     title: "Deployment",
     icon: "bi bi-lightning-charge",
+    phase: "launch",
+    phaseLabel: "Launch",
     body: "End-to-end go-live with minimal downtime for the business.",
   },
   {
     title: "Hosting",
     icon: "bi bi-cloud-arrow-up",
+    phase: "sustain",
+    phaseLabel: "Sustain",
     body: "Secure, scalable hosting sized to your workload and data residency needs.",
   },
   {
     title: "Training",
     icon: "bi bi-mortarboard",
+    phase: "sustain",
+    phaseLabel: "Sustain",
     body: "Hands-on training so your team can actually use what we build.",
   },
 ];
@@ -696,7 +719,9 @@ export default function OdooContent() {
       </section>
 
       {/* ---------------- Services ---------------- */}
-      <section className="cx-section" id="services">
+      <section className="cx-section cx-svc-section" id="services">
+        <div className="cx-svc-bloom" aria-hidden="true" />
+        <div className="cx-svc-mesh" aria-hidden="true" />
         <div className="cx-container">
           <header className="cx-section-head cx-reveal">
             <span className="cx-eyebrow">Comprehensive services</span>
@@ -708,16 +733,45 @@ export default function OdooContent() {
             </p>
           </header>
 
-          <div className="cx-grid cx-grid--4">
-            {SERVICES.map((service) => (
-              <article className="cx-card cx-reveal" key={service.title}>
-                <span className="cx-card-icon" aria-hidden="true">
-                  <i className={service.icon} />
-                </span>
-                <h3 className="cx-h3">{service.title}</h3>
-                <p className="cx-body cx-body--sm">{service.body}</p>
-              </article>
+          <div className="cx-svc-flow cx-reveal" aria-label="Service lifecycle phases">
+            {SERVICE_PHASES.map((phase, index) => (
+              <div className="cx-svc-flow-item" key={phase.id} data-phase={phase.id}>
+                <span className="cx-svc-flow-idx">0{index + 1}</span>
+                <div>
+                  <strong>{phase.label}</strong>
+                  <span>{phase.hint}</span>
+                </div>
+              </div>
             ))}
+          </div>
+
+          <div className="cx-svc-grid">
+            {SERVICES.map((service, index) => {
+              const num = String(index + 1).padStart(2, "0");
+              return (
+                <article
+                  className="cx-svc-tile cx-reveal"
+                  key={service.title}
+                  data-phase={service.phase}
+                >
+                  <span className="cx-svc-tile-idx" aria-hidden="true">
+                    {num}
+                  </span>
+                  <span className="cx-svc-tile-glow" aria-hidden="true" />
+                  <div className="cx-svc-tile-top">
+                    <span className="cx-svc-tile-icon" aria-hidden="true">
+                      <i className={service.icon} />
+                    </span>
+                    <span className="cx-svc-tile-phase">{service.phaseLabel}</span>
+                  </div>
+                  <h3 className="cx-h3">{service.title}</h3>
+                  <p className="cx-body cx-body--sm">{service.body}</p>
+                  <span className="cx-svc-tile-mark" aria-hidden="true">
+                    <i className={service.icon} />
+                  </span>
+                </article>
+              );
+            })}
           </div>
         </div>
       </section>

@@ -328,12 +328,7 @@ export default function CsecContent() {
               <span className="cx-eyebrow">Cybersecurity Excellence Center</span>
               <h1 className="cx-h1">
                 Catch the attack while it is still{" "}
-                <span
-                  className="cx-accent-text cx-csec-glitch"
-                  data-text="in progress"
-                >
-                  in progress
-                </span>
+                <span className="cx-accent-text cx-csec-shimmer">unfolding</span>
               </h1>
               <p className="cx-lead">
                 SIEM, XDR, HIDS, FIM, VA and XOAR unified into one on-premises and

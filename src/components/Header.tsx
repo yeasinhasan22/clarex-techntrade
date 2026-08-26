@@ -1,11 +1,14 @@
 'use client';
 /* eslint-disable @next/next/no-img-element */
+import { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
 
 const SERVICE_PATHS = ['/noc', '/service2', '/service3', '/service4', '/service5', '/service6', '/service7', '/service8', '/service-details'];
 
 export default function Header() {
   const pathname = usePathname();
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
 
   const isActive = (href: string) => {
     if (href === '/') return pathname === '/';
@@ -14,13 +17,24 @@ export default function Header() {
 
   const isServiceActive = () => SERVICE_PATHS.some(p => pathname.startsWith(p));
 
+  useEffect(() => {
+    setMenuOpen(false);
+    setServicesOpen(false);
+  }, [pathname]);
+
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? 'hidden' : '';
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [menuOpen]);
 
   return (
     <>
       <div className="header-sidebar">
               <div className="siderbar-top">
                   <div className="sidebar-log">
-                      <a href="/"><img src="/assets/img/clarex-techntrade.png" height="15px" width="100px" alt="CLAREx Tech & Trade" /></a>
+                      <a href="/"><img src="/assets/img/clarex-techntrade.png" height="28px" width="145px" alt="CLAREx Tech & Trade" /></a>
                   </div>
                   <div className="close-btn">
                       <i className="bi bi-x-lg"></i>
@@ -75,26 +89,52 @@ export default function Header() {
               </div>
           </div>
 
-          <header className="header-area2 one">
+          {menuOpen ? (
+            <button
+              type="button"
+              className="mobile-menu-backdrop"
+              aria-label="Close menu"
+              onClick={() => setMenuOpen(false)}
+            />
+          ) : null}
+
+          <header className={`header-area2 one${menuOpen ? ' is-menu-open' : ''}`}>
               <div className="header-logo">
-                  <a href="/"><img alt="CLAREx Tech & Trade" className="img-fluid" src="/assets/img/clarex-techntrade.png" height="12px" width="120px" /></a>
+                  <a href="/"><img alt="CLAREx Tech & Trade" className="img-fluid" src="/assets/img/clarex-techntrade.png" height="16px" width="150px" /></a>
               </div>
-              <div className="main-menu">
+              <div className={`main-menu${menuOpen ? ' show-menu' : ''}`}>
                   <div className="mobile-logo-area d-lg-none d-flex justify-content-between align-items-center">
                       <div className="mobile-logo-wrap">
-                          <a href="/"><img alt="CLAREx Tech & Trade" src="/assets/img/clarex-techntrade.png" height="15px" width="100px" /></a>
+                          <a href="/"><img alt="CLAREx Tech & Trade" src="/assets/img/clarex-techntrade.png" height="27px" width="150px" /></a>
                       </div>
+                      <button
+                        type="button"
+                        className="mobile-menu-close"
+                        aria-label="Close menu"
+                        onClick={() => setMenuOpen(false)}
+                      >
+                        <i className="bi bi-x-lg" aria-hidden="true" />
+                      </button>
                   </div>
                   <ul className="menu-list">
                       <li className={isActive('/') ? 'menu-item active' : 'menu-item'}>
-                          <a href="/" className="drop-down">Home</a><i className="bi bi-plus dropdown-icon"></i>
+                          <a href="/">Home</a>
                       </li>
                       <li className={isActive('/about') ? 'menu-item active' : 'menu-item'}>
                           <a href="/about">About Us</a>
                       </li>
-                      <li className={isServiceActive() ? 'menu-item active' : 'menu-item'}>
-                          <a href="/service-details">Service</a><i className="bi bi-plus dropdown-icon"></i>
-                          <ul className="sub-menu">
+                      <li className={`menu-item menu-item-has-children${isServiceActive() ? ' active' : ''}`}>
+                          <a href="/service-details">Service</a>
+                          <i
+                            className={`bi bi-plus dropdown-icon${servicesOpen ? ' active' : ''}`}
+                            aria-hidden="true"
+                            onClick={(e) => {
+                              e.preventDefault();
+                              e.stopPropagation();
+                              setServicesOpen((open) => !open);
+                            }}
+                          />
+                          <ul className={`sub-menu${servicesOpen ? ' is-open' : ''}`}>
                               <li className={isActive('/noc') ? 'active' : ''}><a href="/noc">NOC Service</a></li>
                               <li className={isActive('/service2') ? 'active' : ''}><a href="/service2">Infrastructure</a></li>
                               <li className={isActive('/service3') ? 'active' : ''}><a href="/service3">Quality Assurance</a></li>
@@ -161,9 +201,15 @@ export default function Header() {
                   <div className="sidebar-btn2">
                       <img src="/assets/img/home-3/sidebar-btn.svg" alt="" />
                   </div>
-                  <div className="sidebar-button mobile-menu-btn ">
+                  <button
+                    type="button"
+                    className={`sidebar-button mobile-menu-btn${menuOpen ? ' active' : ''}`}
+                    aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+                    aria-expanded={menuOpen}
+                    onClick={() => setMenuOpen((open) => !open)}
+                  >
                       <span></span>
-                  </div>
+                  </button>
               </div>
           </header>
     </>

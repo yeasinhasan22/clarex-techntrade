@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import HomeHeroFx from "@/components/modern/HomeHeroFx";
 
 const COLLABORATOR_LOGOS = [
   { src: "/assets/img/logos/Picture1.png", alt: "Cisco" },
@@ -39,6 +40,9 @@ export default function HomeContent() {
   return (
     <>
       <div className="banner-area3">
+              <HomeHeroFx />
+              <div className="home-hero-bloom" aria-hidden="true" />
+              <div className="home-hero-mesh" aria-hidden="true" />
               <div className="scroll-down">
                   <a href="#home3-partner-area">
                       Scroll Down
@@ -173,9 +177,11 @@ export default function HomeContent() {
                       </div>
                       <div className="home-knox-bar-copy">
                           <span className="home-knox-bar-eyebrow">Official Partnership</span>
-                          <h3 id="home-knox-bar-title">CLAREx Tech &amp; Trade × Samsung Knox</h3>
+                          <h3 id="home-knox-bar-title">
+                              CLAREx Tech &amp; Trade <i className="bi bi-link-45deg" aria-hidden="true" /> Samsung Knox
+                          </h3>
                           <p>
-                              Bangladesh&apos;s only Samsung Knox license reseller — 4,000+ enterprise
+                              Bangladesh&apos;s only Samsung Knox license reseller — 16,000+ enterprise
                               MDM licenses delivered in the last year.
                           </p>
                       </div>
